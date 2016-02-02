@@ -1,1 +1,0 @@
-<div class="footer"> &copy; 2014-2015 <a href="http://www.tuzicms.com" target="_blank">www.tuzicms.com</a> 椰角网络出品</div>
