@@ -38,4 +38,8 @@ class IndexController extends CommonController {
 
 		$this->display();
     }
+
+	public function test(){
+		$this->display();
+	}
 }
