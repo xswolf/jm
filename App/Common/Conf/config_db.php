@@ -10,7 +10,7 @@ return array(
     'DB_USER' => 'root', //数据库用户名
     'DB_PWD' => '', //数据库密码
     'DB_PORT' => '3306', //数据库端口
-    'DB_PREFIX' => 'jm_', //数据库前缀
+    'DB_PREFIX' => 'tuzi_', //数据库前缀
     "AUTHCODE" => '5cP3UOQa4VzEHym6Gk', //密钥
     "COOKIE_PREFIX" => 'g4dEPB_', //cookies
 );
