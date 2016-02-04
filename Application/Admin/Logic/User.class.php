@@ -22,7 +22,7 @@ class User
         return $this->user;
     }
 
-    public function login($username , $password){
+    public function login($username){
 
         $this->user = M('admin')->where(['username'=>$username])->find();
         session( C('LOGIN_INFO') , $this->user );
