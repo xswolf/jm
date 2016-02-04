@@ -19,7 +19,7 @@ class UserController extends Controller
      * @param $username
      * @param $password
      */
-    public function login($username , $password){
+    public function login($username='' , $password=''){
         //判断否非已经登陆
         if(session(C('LOGIN_INFO'))) {
             $this->redirect('Admin/Index/index');
