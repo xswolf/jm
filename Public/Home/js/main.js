@@ -12,7 +12,7 @@ require.config({
 });
 
 
-define(['jquery', 'fullpage', 'index'],
-    function ($,fullpage,index) {
-            index.init($);
+define(['index'],
+    function (index) {
+            index.init();
     });

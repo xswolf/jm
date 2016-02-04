@@ -1,7 +1,7 @@
 define(['jquery', 'fullpage'],
-    function () {
+    function ($) {
        return {
-           init:function($){
+           init:function(){
                $('#dowebok').fullpage();
            }
        }
