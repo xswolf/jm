@@ -5,9 +5,9 @@ return array(
 		'TMPL_R_DELIM'=>'}>', //修改右定界符
 		
 		//'TMPL_EXCEPTION_FILE'=>'./Data/resource/system/exception.html', //访问不存在模块或者方法的异常错误页面
-		'SHOW_PAGE_TRACE'=>false, //开启页面Trace;
+		'SHOW_PAGE_TRACE'=>true, //开启页面Trace;
 		'TMPL_TEMPLATE_SUFFIX'=>'.html',//更改模板文件后缀名
-		
+
 		'TMPL_FILE_DEPR'=>'_',//修改模板文件目录层次,主题模板目录/模块_方法.html
 		
 		'MODULE_ALLOW_LIST' => array('Site','Mobile','Manage'),// 允许访问的模块列表
