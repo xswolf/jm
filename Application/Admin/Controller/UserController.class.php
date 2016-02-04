@@ -16,8 +16,10 @@ class UserController extends Controller
 {
     /**
      * 用户登录
+     * @param $username
+     * @param $password
      */
-    public function login(){
+    public function login($username , $password){
         //判断否非已经登陆
         if(session(C('LOGIN_INFO'))) {
             $this->redirect('Admin/Index/index');
@@ -25,8 +27,6 @@ class UserController extends Controller
         //登录判断
         if ($_POST) {
             $user = new User();
-            $username = I('user_name');
-            $password = I('user_pass');
             $userInfo = $user->login($username);
             if ($userInfo['password'] === md5($password) ) {
                 // 登录成功
