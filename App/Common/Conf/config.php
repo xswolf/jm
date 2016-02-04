@@ -10,9 +10,9 @@ return array(
 		
 		'TMPL_FILE_DEPR'=>'_',//修改模板文件目录层次,主题模板目录/模块_方法.html
 		
-		'MODULE_ALLOW_LIST' => array('Home','Mobile','Manage'),// 允许访问的模块列表
+		'MODULE_ALLOW_LIST' => array('Site','Mobile','Manage'),// 允许访问的模块列表
 		'MODULE_DENY_LIST'   => array('Common'),// 禁止访问的模块列表
-		'DEFAULT_MODULE' => 'Home', //默认分组
+		'DEFAULT_MODULE' => 'Site', //默认分组
 		
 // 		'APP_GROUP_LIST'=>'Home,Admin,Wap', //项目分组设定
 // 		'DEFAULT_GROUP'=>'Home', //默认分组
