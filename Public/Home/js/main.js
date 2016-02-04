@@ -3,14 +3,16 @@
  */
 require.config({
     urlArgs: "bust=" + (new Date()).getTime(), // 清除缓存
-    baseUrl: '/Public/js',
+    baseUrl: 'Public/Home',
     paths: {
-        jquery: 'plugin/jquery/jquery_min'
+        jquery: 'js/plugin/jquery/jquery_min',
+        fullpage: 'js/plugin/jquery/jquery.fullpage.min',
+        index: 'js/index'
     }
 });
 
 
-requirejs(['jquery',  'comm'],
-    function   ($, comm) {
-        console.log(comm)
+define(['jquery', 'fullpage', 'index'],
+    function ($,fullpage,index) {
+            index.init($);
     });
