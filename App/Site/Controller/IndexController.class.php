@@ -7,6 +7,8 @@
  */
 namespace Site\Controller;
 
-class Index {
+use Think\Controller;
+
+class Index extends Controller{
 
 }
