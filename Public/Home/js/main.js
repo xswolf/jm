@@ -11,7 +11,6 @@ require.config({
     }
 });
 
-
 define(['index'],
     function (index) {
             index.init();
