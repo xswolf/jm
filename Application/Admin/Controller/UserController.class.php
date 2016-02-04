@@ -23,7 +23,7 @@ class UserController extends Controller
         if ($_POST) {
             $user = new User();
             $userInfo = $user->login($username , $password);
-            if ($userInfo['password'] === $password) {
+            if ($userInfo['password'] === md5($password) ) {
                 // 登录成功
             } else {
                 // 登录失败
