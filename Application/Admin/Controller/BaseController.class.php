@@ -37,4 +37,7 @@ class BaseController extends \Think\Controller
         }
         return $this->userInfo;
     }
+
+
+
 }

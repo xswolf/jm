@@ -3,7 +3,7 @@
         <div class="pull-right hidden-xs">
             <b>Version</b> 2.3.0
         </div>
-        <strong>Copyright &copy; 2014-2015 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights reserved.
+        <strong>Copyright &copy; 2014-2015 <a href="http://almsaeedstudio.com"></a>.</strong> All rights reserved.
     </footer>
 
     <!-- Control Sidebar -->
@@ -183,6 +183,15 @@
 <script>
     $.widget.bridge('uibutton', $.ui.button);
 </script>
+
+<!-- DataTables -->
+<script src="/Public/Admin/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="/Public/Admin/plugins/datatables/dataTables.bootstrap.min.js"></script>
+<script>
+    $(function () {
+        $(".dataTabes").dataTable();
+    });
+</script>
 <!-- Bootstrap 3.3.5 -->
 <script src="/Public/Admin/bootstrap/js/bootstrap.min.js"></script>
 <!-- Morris.js charts -->
@@ -212,5 +221,6 @@
 <script src="/Public/Admin/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="/Public/Admin/dist/js/demo.js"></script>
+
 </body>
 </html>

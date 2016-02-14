@@ -6,7 +6,7 @@ namespace Admin\Logic;
  * Date: 2016/2/4
  * Time: 13:13
  */
-class User
+class User extends Base
 {
     protected $user;
 
