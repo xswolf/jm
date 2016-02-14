@@ -1,6 +1,7 @@
 <?php
 namespace Admin\Controller;
 
+use Admin\Logic\Base;
 use Admin\Logic\User;
 
 /**
@@ -38,6 +39,11 @@ class BaseController extends \Think\Controller
         return $this->userInfo;
     }
 
+    public function del($id){
+        $table = I("table");
+        if (Base::instance()->del($id ,$table)){
 
+        }
+    }
 
 }

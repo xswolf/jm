@@ -1,3 +1,116 @@
-<div>
+<canvas id="a_canvas" width="800" height="900"></canvas>
 
-</div>
+<script type="text/javascript">
+
+    function contains(arr, obj) {
+        var i = arr.length;
+        while (i--) {
+            if (arr[i] === obj) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    (function (){
+
+        window.addEventListener("load", function(){
+
+            // 获取上下文
+            var a_canvas = document.getElementById('a_canvas');
+            var context = a_canvas.getContext("2d");
+
+
+            // 绘制背景
+            var gradient = context.createLinearGradient(0,0,0,300);
+
+
+            gradient.addColorStop(0,"#e0e0e0");
+            gradient.addColorStop(1,"#ffffff");
+
+
+            context.fillStyle = gradient;
+
+            context.fillRect(0,0,a_canvas.width,a_canvas.height);
+
+
+            // 描绘边框
+            var grid_cols = 10;
+            var grid_rows = 15;
+            var cell_height = a_canvas.height / grid_rows;
+            var cell_width = a_canvas.width / grid_cols;
+            context.lineWidth = 1;
+            context.strokeStyle = "#a0a0a0";
+
+            // 结束边框描绘
+            context.beginPath();
+            // 准备画横线
+            for (var col = 0; col <= grid_cols; col++) {
+                var x = col * cell_width;
+                context.moveTo(x,0);
+                context.lineTo(x,a_canvas.height);
+            }
+            // 准备画竖线
+            for(var row = 0; row <= grid_rows; row++){
+                var y = row * cell_height;
+                context.moveTo(0,y);
+                context.lineTo(a_canvas.width, y);
+            }
+
+
+
+
+            context.stroke();
+
+
+
+
+            // 画圆
+            var data = [
+                [6,8,9],
+                [2,4,8],
+                [2,3,4],
+                [3,5,6],
+                [2,6,9],
+                [4,5,6],
+                [2,3,9],
+                [2,7,8],
+                [3,4,7],
+                [6,7,8],
+                [6,7,8],
+                [6,7,8]
+            ]
+
+
+            var startX = [0,0,0];
+            var startY = [0,0,0];
+            for (var i = 0; i <= grid_rows; i++) {
+                for (var j = 0 ; j <=grid_cols ; j++){
+                    context.beginPath();
+                    var x = j*cell_width + cell_width/2;
+                    var y = i*cell_height + cell_height/2;
+                    context.arc(x,y,cell_height/2-3,0*Math.PI,2*Math.PI);
+                    context.font = "30px Courier New";
+                    context.fillStyle = "blue";
+                    context.fillText(j , x  , y)
+
+                    for (var d in data[i]){
+                        if (data[i][d] == j){
+                            if ( i != 0 ) {
+                                context.moveTo(startX[d], startY[d]);
+                                context.lineTo(x, y);
+                            }
+                            startX[d] = x ;
+                            startY[d] = y ;
+                        }
+                    }
+
+
+                    context.stroke();
+                }
+
+            }
+
+        },false);
+    })();
+</script>

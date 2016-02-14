@@ -30,6 +30,9 @@ class Base
         return M($table)->where(['id' => $id])->find();
     }
 
+    public function del( $id , $table){
+        return M($table)->where([ 'id' => $id ])->save(['status' => 0]);
+    }
     /**
      * @return $this
      */
