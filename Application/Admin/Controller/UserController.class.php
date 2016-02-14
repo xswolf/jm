@@ -20,6 +20,7 @@ class UserController extends Controller
      * @param $password
      */
     public function login($username='' , $password=''){
+        layout(false);
         //判断否非已经登陆
         if(session(C('LOGIN_INFO'))) {
             $this->redirect('Admin/Index/index');
@@ -45,6 +46,7 @@ class UserController extends Controller
      */
     public function loginOut(){
         session(C('LOGIN_INFO'),null);//删除用户信息
+
         $this->redirect('Admin/User/Login');//返回至登录页面
     }
 
