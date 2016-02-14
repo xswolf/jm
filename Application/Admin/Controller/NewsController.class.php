@@ -33,8 +33,11 @@ class NewsController extends BaseController
         $id = I('id');
         if ($_POST) {
             if (isset($id) && !empty($id)) { // 编辑
+                $_POST['updated_at'] = time();
                 News::instance()->edit($_POST, "news");
             } else { // 添加
+                $_POST['created_at'] = time();
+                $_POST['updated_at'] = time();
                 News::instance()->add($_POST, "news");
             }
 
@@ -51,4 +54,17 @@ class NewsController extends BaseController
 
     }
 
+    /**
+     * 删除
+     */
+    public function del() {
+        $id=I('id');
+        if (isset($id) && !empty($id)) { // 删除
+            $_GET['status'] = 0;
+            News::instance()->edit($_GET, "news");
+            $this->redirect('Admin/News/lists');
+        }else{
+            $this->error('删除失败');
+        }
+    }
 }

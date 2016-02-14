@@ -7,20 +7,21 @@
         <div class="form-group">
             <label for="title" class="col-sm-2 control-label">标题</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="title" name="title" placeholder="标题">
+                <input type="hidden" name="id" value="{$bean.id}" >
+                <input type="text" class="form-control" id="title" name="title" value="{$bean.title}" placeholder="标题">
             </div>
         </div>
         <div class="form-group">
             <label for="news_type_id" class="col-sm-2 control-label">类型:</label>
             <div class="col-sm-10">
                 <select class="form-control" id="news_type_id" name="news_type_id">
-                    <option value="1">关于我们</option>
-                    <option value="2">最新通告</option>
-                    <option value="3">行业资讯</option>
-                    <option value="4">嘉美服务</option>
-                    <option value="5">赴美流程</option>
-                    <option value="6">赴美攻略</option>
-                    <option value="7">赴美益处</option>
+                    <option value="1" <if condition="$bean.news_type_id eq 1" >selected="selected"</if>>关于我们</option>
+                    <option value="2" <if condition="$bean.news_type_id eq 2" >selected="selected"</if>>最新通告</option>
+                    <option value="3" <if condition="$bean.news_type_id eq 3" >selected="selected"</if>>行业资讯</option>
+                    <option value="4" <if condition="$bean.news_type_id eq 4" >selected="selected"</if>>嘉美服务</option>
+                    <option value="5" <if condition="$bean.news_type_id eq 5" >selected="selected"</if>>赴美流程</option>
+                    <option value="6" <if condition="$bean.news_type_id eq 6" >selected="selected"</if>>赴美攻略</option>
+                    <option value="7" <if condition="$bean.news_type_id eq 7" >selected="selected"</if>>赴美益处</option>
                 </select>
             </div>
         </div>
@@ -29,7 +30,7 @@
             <label for="content" class="col-sm-2 control-label">内容:</label>
             <div class="col-sm-10">
                 <script src="/Public/Admin/plugins/ckeditor/ckeditor.js"></script>
-                <textarea rows="30" cols="50" id="content" name="content"></textarea>
+                <textarea rows="30" cols="50" id="content" name="content">{$bean.content}</textarea>
                 <script type="text/javascript">CKEDITOR.replace('content');</script>
             </div>
         </div>
@@ -37,9 +38,9 @@
         <div class="form-group">
             <label for="content" class="col-sm-2 control-label">状态:</label>
             <div class="col-sm-10">
-                <label><input type="radio" class="form-" name="status" value="1" checked="checked" />正常</label>
+                <label><input type="radio" class="form-" name="status" value="1" <empty name="bean.status"><else /> checked="checked"</empty> />正常</label>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <label><input type="radio" class="form-" name="status" value="2" />屏蔽</label>
+                <label><input type="radio" class="form-" name="status" value="0" <empty name="bean.status"> checked="checked"<else /></empty>  />屏蔽</label>
             </div>
         </div>
 
