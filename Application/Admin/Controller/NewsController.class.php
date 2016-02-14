@@ -38,8 +38,8 @@ class NewsController extends BaseController
                 News::instance()->add($_POST, "news");
             }
 
-            $this->success('修改成功');
-
+            $this->success('修改成功' , U("News/lists"));
+            exit();
         }
         if (isset($id) && !empty($id)) { // 编辑
             $bean = News::instance()->get($id, "news");

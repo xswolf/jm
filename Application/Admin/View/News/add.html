@@ -3,7 +3,7 @@
     <div class="box-header with-border">
         <h3 class="box-title">新增文章</h3>
     </div><!-- /.box-header -->
-    <form class="form-horizontal">
+    <form class="form-horizontal" method="post" action="{:U('News/save')}">
         <div class="form-group">
             <label for="news_title" class="col-sm-2 control-label">标题</label>
             <div class="col-sm-10">
@@ -13,7 +13,9 @@
         <div class="form-group">
             <label for="nv_id" class="col-sm-2 control-label">类型:</label>
             <div class="col-sm-10">
-                <input type="password" class="form-control" name="nv_id" id="nv_id" placeholder="类型">
+                <select class="form-control" name="nv_id">
+                    <option value="1">文章</option>
+                </select>
             </div>
         </div>
 
