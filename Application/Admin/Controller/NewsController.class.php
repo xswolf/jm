@@ -17,26 +17,38 @@ class NewsController extends BaseController
     /**
      * 文章列表
      */
-    public function lists(){
+    public function lists()
+    {
         $lists = News::instance()->lists('news');
 
-        $this->assign('lists' , $lists);
+        $this->assign('lists', $lists);
         $this->display();
     }
 
     /**
-     * 添加文章
+     * 添加编辑
      */
-    public function add(){
+    public function save()
+    {
+        $id = I('id');
+        if ($_POST) {
+            if (isset($id) && !empty($id)) { // 编辑
+                News::instance()->edit($_POST, "news");
+            } else { // 添加
+                News::instance()->add($_POST, "news");
+            }
 
-//        \Admin\Logic\News::instance()->add( $_POST , 'news' );
-        $this->display();
+            $this->success('修改成功');
+
+        }
+        if (isset($id) && !empty($id)) { // 编辑
+            $bean = News::instance()->get($id, "news");
+            $this->assign('bean', $bean); // 文章对象
+            $this->display('edit');
+        }else{
+            $this->display('add');
+        }
+
     }
 
-    /**
-     * 编辑文章
-     */
-    public function edit(){
-
-    }
 }

@@ -3,25 +3,36 @@
     <div class="box-header with-border">
         <h3 class="box-title">新增文章</h3>
     </div><!-- /.box-header -->
-    <form role="form" action="{:U('add')}" class="form-inline text-left margin">
-
-            <div class="form-inline">
-                <label for="news_title">标题:</label>
-                <input type="text"  name="news_title" class="form-control" id="news_title" placeholder="标题">
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label for="news_title" class="col-sm-2 control-label">标题</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="news_title" name="news_title" placeholder="标题">
             </div>
+        </div>
+        <div class="form-group">
+            <label for="nv_id" class="col-sm-2 control-label">类型:</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" name="nv_id" id="nv_id" placeholder="类型">
+            </div>
+        </div>
 
-            <div class="form-inline">
-                <label for="news_content">内容:</label>
+        <div class="form-group">
+            <label for="news_content" class="col-sm-2 control-label">类型:</label>
+            <div class="col-sm-10">
                 <script src="/Public/Admin/plugins/ckeditor/ckeditor.js"></script>
                 <textarea rows="30" cols="50" id="news_content" name="news_content"></textarea>
                 <script type="text/javascript">CKEDITOR.replace('news_content');</script>
             </div>
+        </div>
 
-
-
-        <div class="box-footer">
-            <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
         </div>
     </form>
+
+
 </div>
 
