@@ -41,8 +41,11 @@ $(function () {
         setTimeout(success_hide, 3000);
         $.cookie('message' , null);
     }
-    console.log(123)
 })
 
 
-$("#input-id").fileinput({'showUpload':false, 'previewFileType':'any'});
+$("#file-4").fileinput({'showUpload':false, 'previewFileType':'any'});
+
+$('#file-4').on('fileloaded', function(event, file, previewId, index, reader) {
+    console.log(file);
+});

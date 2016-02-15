@@ -1,4 +1,4 @@
-define(['jquery', 'fullpage'],
+define(['jquery', 'fullpage' , 'lazyload'],
     function ($) {
         return {
            init:function(){

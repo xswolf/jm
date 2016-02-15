@@ -16,9 +16,5 @@ define(['index'],
             index.init();
     });
 
-define(['jquery','lazyload'],
-    function ($) {
-        $('img.list').lazyload();
-    });
 
 
