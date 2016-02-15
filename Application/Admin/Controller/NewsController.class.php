@@ -33,6 +33,7 @@ class NewsController extends BaseController
     {
         $id = I('id');
         if ($_POST) {
+
             if (isset($id) && !empty($id)) { // 编辑
                 $_POST['updated_at'] = time();
                 if($_FILES['news_icon']['size']) {//判断文件是否更新
@@ -48,7 +49,7 @@ class NewsController extends BaseController
                 News::instance()->add($_POST, "news");
             }
 
-            $this->success('修改成功' , U("Admin/News/lists"));
+            $this->_success('操作成功');
             exit();
         }
         if (isset($id) && !empty($id)) { // 编辑

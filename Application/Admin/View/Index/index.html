@@ -114,3 +114,43 @@
         },false);
     })();
 </script>
+
+<canvas id="arc" width="300px" height="300px"></canvas>
+<script>
+window.onload = function(){
+
+    arc_();
+}
+    function arc_(){
+        var doc = document.getElementById('arc');
+        var cot = doc.getContext("2d");
+
+
+
+        cot.beginPath();
+//        cot.arc(GetRandomNum(0,300),GetRandomNum(0,300),10,0*Math.PI,2*Math.PI);
+        draw(cot);
+        cot.stroke();
+    }
+
+    function GetRandomNum(Min,Max)
+    {
+        var Range = Max - Min;
+        var Rand = Math.random();
+        return(Min + Math.round(Rand * Range));
+    }
+
+
+    function draw(context2D) {
+        var pic = new Image();
+        pic.src = "/ts.png"
+        context2D.clearRect(0, 0, 600, 400);
+        context2D.save(); //保存画笔状态
+        context2D.translate(600 / 2 * Math.random(), 400 / 2 * Math.random()); //开始移动画笔
+        context2D.drawImage(pic, 0, 0);
+        context2D.restore(); //绘制结束以后，恢复画笔状态
+    }
+
+    var num = GetRandomNum(1,10);
+    window.setInterval(arc_  , 1000);
+</script>

@@ -42,10 +42,26 @@ class BaseController extends \Think\Controller
     public function del($id){
         $table = I("table");
         if (Base::instance()->del($id ,$table)){
-            echo 1;
+            $this->ajaxReturn(1);
         } else {
-            echo 0;
+            $this->ajaxReturn(0);
         }
+    }
+
+    protected function _success($message  , $url = ''){
+        setcookie('message' , json_encode(['status'=>1,'message'=>$message] ) );
+        if ($url == ''){
+            $url = '/'.MODULE_NAME.'/'.CONTROLLER_NAME.'/'.ACTION_NAME;
+        }
+        redirect($url);
+    }
+
+    protected function _error($message  , $url = ''){
+        setcookie('message' , json_encode(['status'=>0,'message'=>$message] ) );
+        if ($url == ''){
+            $url = '/'.MODULE_NAME.'/'.CONTROLLER_NAME.'/'.ACTION_NAME;
+        }
+        redirect($url);
     }
 
 }
