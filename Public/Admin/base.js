@@ -23,15 +23,9 @@ $(".btn_del").click(function () {
             if (e) {
                 var url = obj.data('url');
                 var table = obj.data('table');
-                $.post(url, {table: table},
-                    function (data) {
-                        if (data) {
-                            alert('删除成功！');
-                            obj.parent().prev().text('删除');
-                        } else {
-                            alert('删除失败！');
-                        }
-                    });
+
+                location.href = url + 'table=' + table;
+
             }
         }, "json");
 })

@@ -39,27 +39,30 @@ class BaseController extends \Think\Controller
         return $this->userInfo;
     }
 
-    public function del($id){
+    public function del($id)
+    {
         $table = I("table");
-        if (Base::instance()->del($id ,$table)){
-            $this->ajaxReturn(1);
+        if (Base::instance()->del($id, $table)) {
+            $this->_success('删除成功', '/' . MODULE_NAME . '/' . CONTROLLER_NAME . '/lists');
         } else {
-            $this->ajaxReturn(0);
+            $this->_error("删除失败", '/' . MODULE_NAME . '/' . CONTROLLER_NAME . '/lists');
         }
     }
 
-    protected function _success($message  , $url = ''){
-        setcookie('message' , json_encode(['status'=>1,'message'=>$message] ) );
-        if ($url == ''){
-            $url = '/'.MODULE_NAME.'/'.CONTROLLER_NAME.'/'.ACTION_NAME;
+    protected function _success($message, $url = '')
+    {
+        setcookie('message', json_encode(['status' => 1, 'message' => $message]));
+        if ($url == '') {
+            $url = '/' . MODULE_NAME . '/' . CONTROLLER_NAME . '/' . ACTION_NAME;
         }
         redirect($url);
     }
 
-    protected function _error($message  , $url = ''){
-        setcookie('message' , json_encode(['status'=>0,'message'=>$message] ) );
-        if ($url == ''){
-            $url = '/'.MODULE_NAME.'/'.CONTROLLER_NAME.'/'.ACTION_NAME;
+    protected function _error($message, $url = '')
+    {
+        setcookie('message', json_encode(['status' => 0, 'message' => $message]));
+        if ($url == '') {
+            $url = '/' . MODULE_NAME . '/' . CONTROLLER_NAME . '/' . ACTION_NAME;
         }
         redirect($url);
     }
