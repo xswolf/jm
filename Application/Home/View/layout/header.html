@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>嘉美月子</title>
-</head>
-
 <link href="/Public/Common/css/base.css" rel="stylesheet">
+<link href="/Public/Home/css/index.css" rel="stylesheet">
 <link href="/Public/Home/css/plugin/jquery/jquery.fullpage.min.css" rel="stylesheet">
 <script src="/Public/Home/js/plugin/requirejs/require.js" data-main="/Public/Home/js/main.js"></script>
 
@@ -14,5 +13,26 @@
 <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.js"></script>
 <![endif]-->
 
+</head>
+<body>
+<header class="home_header">
+    <div class="header_menu">
+        <div class="header_logo"></div>
+        <div class="header_nav">
+            <ul>
+                <li><a class="nav_a {$actUrl == 'Index' ? 'on' : ''}" href="/Home/Index">首页</a></li>
+                <li><a class="nav_a {$actUrl == 'Superiority' ? 'on' : ''}" href="/Home/Superiority">嘉美优势</a></li>
+                <li><a class="nav_a {$actUrl == 'Guide' ? 'on' : ''}" href="/Home/Guide">赴美指南</a></li>
+                <li><a class="nav_a {$actUrl == 'Synopsis' ? 'on' : ''}" href="/Home/Synopsis">关于嘉美</a></li>
+                <li><a class="nav_a {$actUrl == 'Contact' ? 'on' : ''}" href="/Home/Contact">联系我们</a></li>
+            </ul>
+        </div>
+        <div class="header_tell">
+            <i class="icon_tell"></i>
+            <span class="txt_tell">美国直拨电话： <span class="phone_tell">950-404-93054</span></span>
+
+        </div>
+    </div>
+</header>
 
 
