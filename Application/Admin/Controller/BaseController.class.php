@@ -42,7 +42,9 @@ class BaseController extends \Think\Controller
     public function del($id){
         $table = I("table");
         if (Base::instance()->del($id ,$table)){
-
+            echo 1;
+        } else {
+            echo 0;
         }
     }
 

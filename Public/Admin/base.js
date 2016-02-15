@@ -2,7 +2,7 @@
  * Created by Administrator on 2016/2/14.
  */
 $(".btn_del").click(function(){
-
+var obj = $(this);
 // 四个选项都是可选参数
     Modal.alert(
         {
@@ -20,6 +20,18 @@ $(".btn_del").click(function(){
             msg: "是否删除角色？"
         })
         .on( function (e) {
-            alert("返回结果：" + e);
-        });
+            if(e) {
+                var url = obj.data('url');
+                var table = obj.data('table');
+                $.post(url,{table:table},
+                    function(data){
+                        if(data) {
+                            alert('删除成功！');
+                            obj.parent().prev().text('删除');
+                        } else {
+                            alert('删除失败！');
+                        }
+                    });
+            }
+        },"json");
 })
