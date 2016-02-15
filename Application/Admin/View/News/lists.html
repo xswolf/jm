@@ -32,8 +32,8 @@
                                 <td class="text-center">{$vo.content}</td>
                                 <td class="text-center">{$vo.status|getNewsStatus}</td>
                                 <td class="text-center">
-                                    <a href="{:U('save','id='.$vo['id'])}"><button type="button" class="btn btn-primary">编辑</button></a>
-                                    <button type="button" data-url="{:U('del','id='.$vo['id'])}" data-table="news" class="btn btn-danger btn_del">删除</button>
+                                    <a href="{:U('News/save','id='.$vo['id'])}"><button type="button" class="btn btn-primary">编辑</button></a>
+                                    <button type="button" data-url="{:U('del','id='.$vo['id'].'&table=news')}" class="btn btn-danger btn_del">删除</button>
                                 </td>
                             </tr>
 

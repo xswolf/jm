@@ -22,10 +22,7 @@ $(".btn_del").click(function () {
         .on(function (e) {
             if (e) {
                 var url = obj.data('url');
-                var table = obj.data('table');
-
-                location.href = url + 'table=' + table;
-
+                location.href = url;
             }
         }, "json");
 })
@@ -46,3 +43,6 @@ $(function () {
     }
     console.log(123)
 })
+
+
+$("#input-id").fileinput({'showUpload':false, 'previewFileType':'any'});
