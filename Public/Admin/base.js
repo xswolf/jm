@@ -50,5 +50,5 @@ $(function () {
         setTimeout(success_hide, 3000);
         $.cookie('message' , null);
     }
-
+    console.log(123)
 })
