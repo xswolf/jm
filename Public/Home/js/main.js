@@ -7,7 +7,7 @@ require.config({
     paths: {
         jquery: 'plugin/jquery/jquery_min',
         fullpage: 'plugin/jquery/jquery.fullpage.min',
-        lazyload: 'plugin/jquery/jquery.lazyload.min'
+        lazyload: 'plugin/jquery/jquery.lazyload'
     }
 });
 
@@ -16,9 +16,5 @@ define(['index'],
             index.init();
     });
 
-define(['jquery','lazyload'],
-    function ($) {
-        $('img.list').lazyload();
-    });
 
 

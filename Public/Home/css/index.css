@@ -79,7 +79,7 @@
     width: 100%;
     height: 100%;
 }
-.main_content .list{
+.list{
     position: absolute;
     right: 0;
     top: 0;
@@ -117,12 +117,137 @@
     visibility: visible;
     z-index: 10;
     position: absolute;
+    display: none;
 }
-.v1 .home1{
+.v1 .am1_1{
     top: 25%;
 }
-.v1 .home2{
+.v1 .am1_2{
     top: 35%;
     left: 35%;
 }
+.v2{
 
+}
+.txt_box{
+    width: 570px;
+    height: 263px;
+    position: relative;
+    z-index: 10;
+    top: 25%;
+}
+
+.l55{
+    left: 55px;
+}
+.v2 .am2_2{
+    top: 100px;
+}
+.v2 .am2_3{
+    top: 145px;
+}
+.v2 .am2_4{
+    top: 190px;
+}
+
+.t120{
+    top: 120px;
+}
+.v3{
+
+}
+.v3 .am3_1{
+    left: 80px;
+}
+.v3 .am3_2{
+    left: 225px;
+}
+.v3 .am3_3{
+    left: 375px;
+}
+.v4{
+
+}
+
+.v4 .txt_box{
+    top: 25%;
+    width: 39%;
+    height: 53%;
+    min-height: 400px;
+    padding: 2% 4%;
+}
+.v4 .txt_box .phone{
+    margin: 20px 0;
+}
+.v4 .txt_box .phone .icon_tel{
+
+}
+.v4 .txt_box .l_box{
+    width: 50px;
+    border-right: 1px solid #000000;
+}
+.v4 .txt_box .r_box{
+    width: 360px;
+}
+.v4 .txt_box .r_box p{
+    font-size: 13px;
+}
+.sp-line{
+    border-top: 1px dashed #333;
+    height: 1px;
+    width: 100%;
+}
+.v4 .txt_box .wechat{
+    margin: 20px 0;
+}
+
+.go-next{
+    bottom: 80px;
+    color: #ffffff;
+    cursor: pointer;
+    display: block;
+    height: 28px;
+    left: 50%;
+    margin-left: -15px;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    width: 52px;
+    z-index: 99;
+    background: url(/Public/Home/images/gonext.png) no-repeat;
+}
+
+.ft{
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    height: 16.5%;
+    background: #333333;
+    z-index: 99;
+}
+.ft .ft_content{
+    color: #fff;
+    padding: 1.5% 0;
+}
+.ft .ft_content ul{
+    float: left;
+}
+.ft .ft_content ul li{
+    float: left;
+    border-right: 1px solid #fff;
+    padding: 0 10px;
+}
+.ft .ft_content ul li:last-child{
+    border-right: 0;
+}
+.ft .ft_content ul li a{
+    color: #fff;
+}
+.ft .ft_content ul li a:hover{
+    color: #e4007f;
+}
+.ft .ft_content p{
+    line-height: 20px;
+    padding-left: 10px;
+}

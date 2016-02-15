@@ -97,6 +97,7 @@ a:hover{text-decoration:underline;}   /* 让链接在 hover 状态下显示下�
 .f_blue {color:#06c;}          /* 蓝色 */
 .f_pink  {color:#F03B85;}    /* 粉色 */
 .f_red  {color:#f00;}    /* 红色 */
+.f_def{ color: #e4007f;} /* 默认 */
 
 /* 文字大小  */
 .f_size_12 {font-size:12px;}
@@ -104,3 +105,11 @@ a:hover{text-decoration:underline;}   /* 让链接在 hover 状态下显示下�
 .f_size_16 {font-size:16px;}
 .f_size_18 {font-size:18px;}
 .f_size_20 {font-size:20px;}
+
+.f_wryh{ font-family: microsoft yahei, arial;}
+.lh24{ line-height: 24px;}
+.lh48{ line-height: 48px;}
+.ml10{ margin-left: 10px;}
+.ml15{ margin-left: 15px;}
+.ml30{ margin-left: 30px;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
