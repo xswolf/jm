@@ -22,10 +22,7 @@ $(".btn_del").click(function () {
         .on(function (e) {
             if (e) {
                 var url = obj.data('url');
-                var table = obj.data('table');
-
-                location.href = url + 'table=' + table;
-
+                location.href = url;
             }
         }, "json");
 })
@@ -44,5 +41,11 @@ $(function () {
         setTimeout(success_hide, 3000);
         $.cookie('message' , null);
     }
-    console.log(123)
 })
+
+
+$("#file-4").fileinput({'showUpload':false, 'previewFileType':'any'});
+
+$('#file-4').on('fileloaded', function(event, file, previewId, index, reader) {
+    console.log(file);
+});
