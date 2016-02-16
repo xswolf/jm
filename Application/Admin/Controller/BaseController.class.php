@@ -20,7 +20,7 @@ class BaseController extends \Think\Controller
     public function _initialize()
     {
         if (!$this->isLogin()) {
-            redirect(U('User/Login'));
+            redirect(U('User/login'));
         }
     }
 
