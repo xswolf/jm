@@ -47,7 +47,7 @@ class UserController extends Controller
     public function loginOut(){
         session(C('LOGIN_INFO'),null);//删除用户信息
 
-        $this->redirect('Admin/User/Login');//返回至登录页面
+        $this->redirect('Admin/User/login');//返回至登录页面
     }
 
 }
