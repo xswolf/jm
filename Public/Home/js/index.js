@@ -24,14 +24,13 @@ define(['jquery', 'fullpage'],
                    afterLoad: function(anchorLink, index){
                        if(index == 1){
                           setTimeout(function(){
-
                               $('div[data-bglazy]').each(function(){
                                     $(this).css('backgroundImage','url('+$(this).data('bglazy')+')');
                               });
                               $('img[data-lazy]').each(function(){
                                     $(this).attr('src',$(this).data('lazy'));
                               })
-                          },1000)
+                          },500)
                        }
                        if(index == 2){
                            $('#gonext').show();
