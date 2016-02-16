@@ -83,7 +83,7 @@
     right: 0;
     top: 0;
     z-index: 9;
-    height: 100%;
+    width: 25%;
 }
 .main_content .one{
     right: 8%;
@@ -262,4 +262,21 @@
 .ft .ft_content p{
     line-height: 20px;
     padding-left: 10px;
+}
+
+
+/* 通用标准底部 */
+.footer{
+   height: 150px;
+}
+.footer .ft_content{
+    padding: 20px 0;
+    height: 110px;
+}
+.footer .ft_content .content{
+
+}
+.ft_wxcode{
+    border-left: 1px solid #fff;
+    padding-left: 40px;
 }
