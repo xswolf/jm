@@ -1,4 +1,4 @@
-define(['jquery', 'fullpage','lazyload'],
+define(['jquery', 'fullpage'],
     function ($) {
         return {
            init:function(){
@@ -16,7 +16,23 @@ define(['jquery', 'fullpage','lazyload'],
                    },800);
                },100);
                $('#dowebok').fullpage({
+                   afterRender:function(){
+                        $('.section').eq(1).show();
+                        $('.section').eq(2).show();
+                        $('.section').eq(3).show();
+                   },
                    afterLoad: function(anchorLink, index){
+                       if(index == 1){
+                          setTimeout(function(){
+
+                              $('div[data-bglazy]').each(function(){
+                                    $(this).css('backgroundImage','url('+$(this).data('bglazy')+')');
+                              });
+                              $('img[data-lazy]').each(function(){
+                                    $(this).attr('src',$(this).data('lazy'));
+                              })
+                          },1000)
+                       }
                        if(index == 2){
                            $('#gonext').show();
                            setTimeout(function(){
@@ -52,7 +68,6 @@ define(['jquery', 'fullpage','lazyload'],
                        }
                    }
                });
-               $('img.list').lazyload();
                $(document).on('click', '#gonext', function(){
                    $.fn.fullpage.moveSectionDown();
                });

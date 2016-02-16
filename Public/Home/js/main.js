@@ -6,8 +6,7 @@ require.config({
     baseUrl: '/Public/Home/js',
     paths: {
         jquery: 'plugin/jquery/jquery_min',
-        fullpage: 'plugin/jquery/jquery.fullpage.min',
-        lazyload: 'plugin/jquery/jquery.lazyload'
+        fullpage: 'plugin/jquery/jquery.fullpage.min'
     }
 });
 
@@ -15,6 +14,7 @@ define(['index'],
     function (index) {
             index.init();
     });
+
 
 
 
