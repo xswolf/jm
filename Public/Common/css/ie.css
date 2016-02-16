@@ -1,0 +1,8 @@
+@charset "utf-8";
+
+.v1 .txt_box,.v2 .txt_box,.v3 .txt_box, .v4 .txt_box{
+    display: block !important;
+}
+#dowebok .am_con{
+    display: block !important;
+}

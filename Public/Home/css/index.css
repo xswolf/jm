@@ -14,12 +14,11 @@
     width: 1200px; margin: 0 auto; height: 100%;
 }
 .header_menu .header_logo{
-    background: url(/Public/Common/images/156x52_logo.png) no-repeat;
+    background: url(/Public/Common/images/156x52_logo.png) no-repeat center;
     width: 156px;
-    height: 52px;
+    height: 100px;
     float: left;
     position: relative;
-    top: 20px;
 }
 
 .header_menu .header_nav{
@@ -37,12 +36,12 @@
     position: relative;
 }
 .header_menu .header_nav li a{
-    font-family: microsoft yahei, arial;
-    color: #333;
+    color: #666;
     display: block;
     font-size: 16px;
     text-decoration: none;
     padding: 0 30px;
+    font-weight: 700;
 }
 .header_menu .header_nav li a:hover{
   color: #e4007f;
@@ -120,12 +119,18 @@
     display: none;
 }
 .v1 .am1_1{
-    top: 25%;
+    top: 4%;
+    left: 1%;
 }
 .v1 .am1_2{
-    top: 35%;
-    left: 35%;
+    top: 18%;
+    left: 1%;
 }
+.v1 .am1_3{
+    top: 29%;
+    left: 1%;
+}
+
 .v2{
 
 }
@@ -169,7 +174,7 @@
 
 }
 
-.v4 .txt_box{
+.v1 .txt_box,.v4 .txt_box{
     top: 25%;
     width: 39%;
     height: 53%;

@@ -3,11 +3,17 @@ define(['jquery', 'fullpage','lazyload'],
         return {
            init:function(){
                setTimeout(function(){
-                   $('.am1_1').show().addClass('bounceInLeft');
+                   $('.v1 .txt_box').show().addClass('fadeInDown');
                    setTimeout(function(){
-                       $('.am1_2').show().addClass('bounceInLeft');
+                       $('.am1_1').show().addClass('bounceInLeft');
+                       setTimeout(function(){
+                           $('.am1_2').show().addClass('bounceInLeft');
+                           setTimeout(function(){
+                               $('.am1_3').show().addClass('fadeIn');
+                           },800);
+                       },800);
                    },800);
-               },800);
+               },100);
                $('#dowebok').fullpage({
                    afterLoad: function(anchorLink, index){
                        if(index == 2){
@@ -22,7 +28,7 @@ define(['jquery', 'fullpage','lazyload'],
                                        },800);
                                    },800);
                                },800);
-                           },800);
+                           },100);
                        }
                        if(index == 3){
                            setTimeout(function(){
@@ -36,7 +42,7 @@ define(['jquery', 'fullpage','lazyload'],
                                        },800);
                                    },800);
                                },800);
-                           },800);
+                           },100);
                        }
                        if(index == 4){
                             $('#gonext').hide();

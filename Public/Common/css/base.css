@@ -107,6 +107,7 @@ a:hover{text-decoration:underline;}   /* 让链接在 hover 状态下显示下�
 .f_size_20 {font-size:20px;}
 
 .f_wryh{ font-family: microsoft yahei, arial;}
+.pr{ position: relative;}
 .lh24{ line-height: 24px;}
 .lh48{ line-height: 48px;}
 .ml10{ margin-left: 10px;}
