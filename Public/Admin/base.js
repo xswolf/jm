@@ -44,8 +44,8 @@ $(function () {
 })
 
 
-$("#file-4").fileinput({'showUpload':false, 'previewFileType':'any'});
+$("#file-4").fileinput({'showUpload':true, 'previewFileType':'any'});
 
-$('#file-4').on('fileloaded', function(event, file, previewId, index, reader) {
-    console.log(file);
+$('#file-4').on('fileuploaded', function(event, file, previewId, index, reader) {
+    $('#file-4-value').attr({value:file.response.imgurl});
 });

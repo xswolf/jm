@@ -33,7 +33,6 @@ class NewsController extends BaseController
     {
         $id = I('id');
         if ($_POST) {
-
             if (isset($id) && !empty($id)) { // 编辑
                 $_POST['updated_at'] = time();
                 News::instance()->edit($_POST, "news");

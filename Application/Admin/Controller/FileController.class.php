@@ -11,7 +11,6 @@ namespace Admin\Controller;
 class FileController extends BaseController
 {
     public function upload(){
-        $rootPath = I('path');
         $size = 2097152;
         $upload = new \Think\Upload();// 实例化上传类
         $upload->maxSize   =     $size ;// 设置附件上传大小
@@ -24,7 +23,7 @@ class FileController extends BaseController
             $this->error($upload->getError());
         }else{// 上传成功
             //返回绝对路径
-            $url = 'www.jm.com'.$upload->rootPath.$info['news_icon_url']['savepath'].$info['news_icon_url']['savename'];
+            $url = 'www.jm.com'.$upload->rootPath.$info['news_icon']['savepath'].$info['news_icon']['savename'];
             $return  = array('status' => 1, 'info' => '上传成功', 'imgurl' => $url);
             $this->ajaxReturn($return);
         }
