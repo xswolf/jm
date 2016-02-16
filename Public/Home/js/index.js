@@ -2,6 +2,7 @@ define(['jquery', 'fullpage','lazyload'],
     function ($) {
         return {
            init:function(){
+               $('#gonext').show();
                setTimeout(function(){
                    $('.v1 .txt_box').show().addClass('fadeInDown');
                    setTimeout(function(){
@@ -17,6 +18,7 @@ define(['jquery', 'fullpage','lazyload'],
                $('#dowebok').fullpage({
                    afterLoad: function(anchorLink, index){
                        if(index == 2){
+                           $('#gonext').show();
                            setTimeout(function(){
                                $('.v2 .txt_box').show().addClass('fadeInDown');
                                setTimeout(function(){
@@ -31,6 +33,7 @@ define(['jquery', 'fullpage','lazyload'],
                            },100);
                        }
                        if(index == 3){
+                           $('#gonext').show();
                            setTimeout(function(){
                                $('.v3 .txt_box').show().addClass('fadeInDown');
                                setTimeout(function(){
@@ -56,5 +59,6 @@ define(['jquery', 'fullpage','lazyload'],
            }
        }
 });
+
 
 

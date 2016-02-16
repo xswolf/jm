@@ -110,13 +110,17 @@
 .phone_tell{
     font-weight: 700;
     font-size: 16px;
-    font-family: Tahoma, Geneva, sans-serif;
+    font-family: "microsoft yahei";
+    font-style: oblique;
 }
 .am_con{
     visibility: visible;
     z-index: 10;
     position: absolute;
     display: none;
+}
+.one{
+    right: 2%;
 }
 .v1 .am1_1{
     top: 4%;
@@ -169,6 +173,9 @@
 }
 .v3 .am3_3{
     left: 375px;
+}
+.three{
+    right: 5%;
 }
 .v4{
 
