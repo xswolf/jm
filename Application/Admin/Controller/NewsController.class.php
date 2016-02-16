@@ -33,15 +33,17 @@ class NewsController extends BaseController
     {
         $id = I('id');
         if ($_POST) {
-            if (isset($id) && !empty($id)) { // 编辑
-                $_POST['updated_at'] = time();
-                News::instance()->edit($_POST, "news");
-            } else { // 添加
-                $_POST['created_at'] = time();
-                $_POST['updated_at'] = time();
-                News::instance()->add($_POST, "news");
+            //判断标题，内容是否为空
+            if(!empty($_POST['title']) && !empty($_POST['content'])) {
+                if (isset($id) && !empty($id)) { // 编辑
+                    $_POST['updated_at'] = time();
+                    News::instance()->edit($_POST, "news");
+                } else { // 添加
+                    $_POST['created_at'] = time();
+                    $_POST['updated_at'] = time();
+                    News::instance()->add($_POST, "news");
+                }
             }
-
             $this->_success('操作成功');
             exit();
         }
@@ -52,10 +54,6 @@ class NewsController extends BaseController
         }else{
             $this->display('add');
         }
-    }
-
-    public function upload() {
-
     }
 
 }
