@@ -1,0 +1,176 @@
+@charset "utf-8";
+/*
+   @名称: adaptive
+   @功能: 各种设备自适应样式
+*/
+
+/*
+1024 * 768、768 * 1280、640 * 960、320 * 480
+
+*/
+@media only screen and (min-width: 1280px) and (max-width: 1920px){
+
+}
+@media only screen and (min-width: 1024px) and (max-width: 1279px){
+    .fullpage-wrapper .main_content, .ft .ft_content{ width: 100%;}
+    /* 第一屏 */
+    img.one{ top: 6%;  width: 49%; }
+    .v1 .txt_box{ left: 2%;  padding: 0;  top: 23%;  width: 36%; }
+    .header_menu{ width: 1024px;}
+    .header_menu .header_nav li a{ padding: 0 15px;}
+    .header_menu .header_nav{ margin-left: 85px;}
+
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+    .fullpage-wrapper .main_content, .ft .ft_content{ width: 100%;}
+    /* 第一屏 */
+    img.one{ top: 8%;  width: 40%; }
+    .v1 .txt_box{height: 259px;  left: 3%;  padding: 0;  top: 125px;  width: 405px;}
+    .header_menu{ width: 768px;}
+    .header_menu .header_nav li a{ padding: 0 10px; font-size: 14px}
+    .header_menu .header_nav{ margin-left: 24px;}
+    .header_menu .header_logo{ display: none;}
+
+    /* 第二屏 */
+    img.two{bottom: 0;  height: 80%;  top: auto;  width: auto;}
+    .v2 .txt_box {  height: 208px;  top: 212px;  width: 450px;  z-index: 10;  background-repeat: no-repeat;  background-size: 100% auto;}
+    .v2 img.am2_2 {  margin-top: 75px;  width: 45%;    }
+    .v2 .am_con {  margin: 10px 45px;    }
+    .v2 .am2_3,.v2 .am2_4 {  width: 46%;  }
+
+    /* 第三屏 */
+    img.three{bottom: 0;  height: 80%;  top: auto;}
+    .v3 .txt_box{background-repeat: no-repeat;  background-size: 100% auto;  height: auto;  top: 28%;  width: 52%;left: 1%;}
+    .v3 .am_con{margin: 23% 8%; width: 15%;}
+    .t120{ top: auto;}
+
+    /* 第四屏 */
+    img.four{bottom: 0;  height: 75%;  top: auto;}
+    .v4 .txt_box{ background-repeat: no-repeat;  background-size: 100% auto;  height: auto;  left: 1%;  top: 20%;  width: 56%;}
+    .v4 .am_con{margin: 23% 8%; width: 15%;}
+    .v4 .am4_1{ width: 90%;}
+    .v4 .am4_2{ font-size: 16px;}
+
+}
+@media only screen and (min-width: 640px) and (max-width: 767px){
+    .fullpage-wrapper .main_content, .ft .ft_content{ width: 100%;}
+    /* 第一屏 */
+    img.one{ top: 8%;  width: 40%; }
+    .v1 .txt_box{height: 240px;  left: 2%;  top: 118px;  width: 350px;}
+    .header_menu .header_logo{ display: none;}
+    .header_menu .header_nav{ margin-left: 0;}
+    .home_header{ height: 80px; line-height: 80px;}
+    .header_menu .header_nav li a{ font-size: 12px; padding: 0 15px;}
+    .header_tell{ float: left; margin-left: 32px;}
+    .icon_tell{ height: 80px;}
+    .phone_tell{ font-size: 12px;}
+
+    /* 第二屏 */
+    img.two{bottom: 0;  height: 70%;  top: auto;  width: auto;}
+    .v2 .txt_box {  height: 182px;  top: 170px;  width: 395px;  z-index: 10;  background-repeat: no-repeat;  background-size: 100% auto;}
+    .v2 img.am2_2 {  margin-top: 65px;  width: 43%;    }
+    .v2 .am_con {  margin: 10px 45px;    }
+    .v2 .am2_3,.v2 .am2_4 {  width: 43%;  }
+
+    /* 第三屏 */
+    img.three{bottom: 0;  height: 80%;  top: auto;}
+    .v3 .txt_box{background-repeat: no-repeat;  background-size: 100% auto;  height: auto;  top: 28%;  width: 52%;left: 1%;}
+    .v3 .am_con{margin: 23% 8%; width: 15%;}
+    .t120{ top: auto;}
+
+    /* 第四屏 */
+    img.four{bottom: 0;  height: 70%;  top: auto;}
+    .v4 .txt_box{ background-repeat: no-repeat;  background-size: 100% auto;  height: auto;  left: 1%;  top: 20%;  width: 56%;}
+    .v4 .am_con{margin: 23% 8%; width: 15%;}
+    .v4 .am4_1{ width: 80%;}
+    .v4 .am4_2{ font-size: 14px;}
+    .v4 .txt_box .phone,.v4 .txt_box .wechat{ margin: 10px 0;}
+    .v4 .txt_box .r_box{ width: 280px;}
+    .ft{height: 12%;}
+}
+@media only screen and (min-width: 320px) and (max-width: 639px) {
+    .fullpage-wrapper .main_content, .ft .ft_content{ width: 100%;}
+    /* 第一屏 */
+    img.one{ top: 8%;  width: 40%; }
+    .v1 .txt_box{height: 18%;  left: 3%;  top: 14%;  width: 50%;}
+    .v1 .am_con{ margin: 10px 0;}
+    .header_menu{ width: 100%;}
+    .header_menu .header_logo{ display: none;}
+    .header_menu .header_nav{ margin-left: 0; width: 100%;}
+    .header_menu .header_nav ul{ min-width: 320px; width: 100%;}
+    .header_menu .header_nav li{ width: 20%; text-align: center; min-width: 40px;}
+    .home_header{ height: 60px; line-height: 60px;}
+    .header_menu .header_nav li a{ font-size: 12px; padding: 0;}
+    .header_tell{ display: none;}
+
+    /* 第二屏 */
+    img.two{bottom: 0;  height: 60%;  top: auto;  width: auto;}
+    .v2 .txt_box {  background-repeat: no-repeat;  background-size: 100% auto;  height: 177px;  top: 20%;  width: 60%;  z-index: 10;}
+    .v2 img.am2_2 { margin-top: 16%;  width: 43%;  }
+    .v2 .am_con {  margin: 3% 10%;   }
+    .v2 .am2_3,.v2 .am2_4 {  width: 43%;  }
+
+    /* 第三屏 */
+    img.three{bottom: 0;  height: 55%;  top: auto;}
+    .v3 .txt_box{background-repeat: no-repeat;  background-size: 100% auto;  height: auto;  top: 28%;  width: 70%;left: 1%;}
+    .v3 .am_con{margin: 23% 8%; width: 15%;}
+    .t120{ top: auto;}
+
+    /* 第四屏 */
+    img.four{bottom: 0;  height: 60%;  top: auto;}
+    .v4 .txt_box{ background-repeat: no-repeat;  background-size: 100% auto;  height: auto;  left: 1%;  top: 20%;  width: 68%;}
+    .v4 .am_con{margin: 23% 8%; width: 15%;}
+    .v4 .am4_1{ width: 80%; }
+    .v4 .am4_2{  line-height: 18px; font-size: 12px;}
+    .v4 .txt_box .phone,.v4 .txt_box .wechat{ margin: 10px 0;}
+    .v4 .txt_box .phone .icon_tel{ width: 26px;}
+    .v4 .txt_box .r_box{ width: 280px;}
+    .v4 .txt_box .r_box p{ font-size: 12px;}
+    .v4 .txt_box .l_box{ width: 35px; display: none;}
+    .ft{height: 28%;}
+    .wximg{width: 100px; }
+}
+@media only screen and (max-width: 319px) {
+    .fullpage-wrapper .main_content, .ft .ft_content{ width: 100%;}
+    /* 第一屏 */
+    img.one{ top: 8%;  width: 150px;}
+    .v1 .txt_box{height: 115px;  left: 2%;  top: 105px;  width: 155px; }
+    .v1 .am_con{ margin: 10px 0;}
+    .header_menu{ width: 100%;}
+    .header_menu .header_logo{ display: none;}
+    .header_menu .header_nav{ margin-left: 0; width: 100%;}
+    .header_menu .header_nav ul{ min-width: 320px; width: 100%;}
+    .header_menu .header_nav li{ width: 20%; text-align: center; min-width: 40px;}
+    .home_header{ height: 60px; line-height: 60px;}
+    .header_menu .header_nav li a{ font-size: 12px; padding: 0;}
+    .header_tell{ display: none;}
+    #dowebok{ min-width: 320px;}
+
+    /* 第二屏 */
+    img.two{bottom: 0;  height: 60%;  top: auto;  width: auto;}
+    .v2 .txt_box {  background-repeat: no-repeat;  background-size: 100% auto;  height: 177px;  top: 20%;  width: 60%;  z-index: 10;}
+    .v2 img.am2_2 { margin-top: 16%;  width: 43%;  }
+    .v2 .am_con {  margin: 3% 10%;   }
+    .v2 .am2_3,.v2 .am2_4 {  width: 43%;  }
+
+    /* 第三屏 */
+    img.three{bottom: 0;  height: 50%;  top: auto;}
+    .v3 .txt_box{background-repeat: no-repeat;  background-size: 100% auto;  height: auto;  top: 20%;  width: 68%;left: 1%;}
+    .v3 .am_con{margin: 23% 8%; width: 15%;}
+    .t120{ top: auto;}
+
+    /* 第四屏 */
+    img.four{bottom: 0;  height: 60%;  top: auto;}
+    .v4 .txt_box{ background-repeat: no-repeat;  background-size: 100% auto;  height: auto;  left: 1%;  top: 20%;  width: 68%;}
+    .v4 .am_con{margin: 23% 8%; width: 15%;}
+    .v4 .am4_1{ width: 80%; }
+    .v4 .am4_2{  line-height: 18px; font-size: 12px;}
+    .v4 .txt_box .phone,.v4 .txt_box .wechat{ margin: 10px 0;}
+    .v4 .txt_box .phone .icon_tel{ width: 26px;}
+    .v4 .txt_box .r_box{ width: 280px;}
+    .v4 .txt_box .r_box p{ font-size: 12px;}
+    .v4 .txt_box .l_box{ width: 35px; display: none;}
+    .ft{height: 28%;}
+    .wximg{width: 100px; }
+}
+
