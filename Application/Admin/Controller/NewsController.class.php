@@ -44,7 +44,7 @@ class NewsController extends BaseController
                     News::instance()->add($_POST, "news");
                 }
             }
-            $this->_success('操作成功');
+            $this->_success('操作成功' , U('News/lists'));
             exit();
         }
         if (isset($id) && !empty($id)) { // 编辑
