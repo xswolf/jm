@@ -55,8 +55,8 @@
 @media only screen and (min-width: 640px) and (max-width: 767px){
     .fullpage-wrapper .main_content, .ft .ft_content{ width: 100%;}
     /* 第一屏 */
-    img.one{ top: 8%;  width: 40%; }
-    .v1 .txt_box{height: 240px;  left: 2%;  top: 118px;  width: 350px;}
+    img.one{ bottom: 10%;  right: 0;  top: auto;  width: 53%;}
+    .v1 .txt_box{left: 2%;  top: 17%;  width: 57%;}
     .header_menu .header_logo{ display: none;}
     .header_menu .header_nav{ margin-left: 0;}
     .home_header{ height: 80px; line-height: 80px;}
@@ -87,12 +87,14 @@
     .v4 .txt_box .phone,.v4 .txt_box .wechat{ margin: 10px 0;}
     .v4 .txt_box .r_box{ width: 280px;}
     .ft{height: 12%;}
+    div.footer{ height: 110px;}
+    .footer .ft_wxcode{ display: none;}
 }
 @media only screen and (min-width: 320px) and (max-width: 639px) {
     .fullpage-wrapper .main_content, .ft .ft_content{ width: 100%;}
     /* 第一屏 */
-    img.one{ top: 8%;  width: 40%; }
-    .v1 .txt_box{height: 18%;  left: 3%;  top: 14%;  width: 50%;}
+    img.one{bottom: 5%;  right: 0;  top: auto;  width: 65%;}
+    .v1 .txt_box{height: 34%;  left: 3%;  top: 14%;  width: 80%;}
     .v1 .am_con{ margin: 10px 0;}
     .header_menu{ width: 100%;}
     .header_menu .header_logo{ display: none;}
@@ -128,13 +130,16 @@
     .v4 .txt_box .r_box p{ font-size: 12px;}
     .v4 .txt_box .l_box{ width: 35px; display: none;}
     .ft{height: 28%;}
+    div.footer{ height: 116px;}
+    .footer .ft_content .content{ margin-top: 0;}
     .wximg{width: 100px; }
+    .footer .ft_wxcode{ display: none;}
 }
 @media only screen and (max-width: 319px) {
     .fullpage-wrapper .main_content, .ft .ft_content{ width: 100%;}
     /* 第一屏 */
-    img.one{ top: 8%;  width: 150px;}
-    .v1 .txt_box{height: 115px;  left: 2%;  top: 105px;  width: 155px; }
+    img.one{bottom: 5%;  right: 0;  top: auto;  width: 65%;}
+    .v1 .txt_box{height: 34%;  left: 3%;  top: 14%;  width: 80%;}
     .v1 .am_con{ margin: 10px 0;}
     .header_menu{ width: 100%;}
     .header_menu .header_logo{ display: none;}
@@ -171,6 +176,10 @@
     .v4 .txt_box .r_box p{ font-size: 12px;}
     .v4 .txt_box .l_box{ width: 35px; display: none;}
     .ft{height: 28%;}
+    div.footer{ height: 116px; min-width: 320px; }
+    .footer .ft_content .content{ margin-top: 0;}
+    .syn_img{min-width: 320px; }
     .wximg{width: 100px; }
+    .footer .ft_wxcode{ display: none;}
 }
 

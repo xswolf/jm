@@ -254,7 +254,6 @@
 }
 .ft .ft_content{
     color: #fff;
-    padding-top: 12px;
 }
 .ft .ft_content ul{
     float: left;
@@ -280,11 +279,13 @@
 
 /* 通用标准底部 */
 .footer{
-   height: 150px;
+   height: 130px;
+}
+div.ft{
+    position: relative;
 }
 .footer .ft_content{
-    padding: 20px 0;
-    height: 110px;
+
 }
 .footer .ft_content .content{
 
