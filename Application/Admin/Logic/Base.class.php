@@ -14,8 +14,12 @@ class Base
 
     static $instance = null;
 
-    public function lists($table){
-        return M($table)->limit(10)->select();
+    public function lists($table , $offset = "" , $length=10){
+        $m = M($table);
+        if ($offset != ''){
+            $m->limit($offset , $length);
+        }
+        return $m->select();
     }
 
     public function add($data , $table){
