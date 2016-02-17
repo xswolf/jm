@@ -23,7 +23,7 @@ class FileController extends BaseController
             $this->error($upload->getError());
         }else{// 上传成功
             //返回绝对路径
-            $url = 'www.jm.com'.$upload->rootPath.$info['news_icon']['savepath'].$info['news_icon']['savename'];
+            $url = $upload->rootPath.$info['news_icon']['savepath'].$info['news_icon']['savename'];
             $return  = array('status' => 1, 'info' => '上传成功', 'imgurl' => $url);
             $this->ajaxReturn($return);
         }

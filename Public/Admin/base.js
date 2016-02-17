@@ -54,3 +54,26 @@ $("#file-4").fileinput({
 $('#file-4').on('fileuploaded', function(event, file, previewId, index, reader) {
     $('#file-4-value').attr({value:file.response.imgurl});
 });
+
+//文章提交验证
+$('.btn-submit').click(function() {
+    var form = $(document.savenews);
+    var name = $('input[name="title"]',form);
+    var news_icon_url = $('input[name="news_icon_url"]',form);
+    var content=CKEDITOR.instances.content.getData(); //取得纯文本
+
+    if($.trim(name.val()) == '') {
+        layer.msg('标题不能为空');
+        return false;
+    }
+    if($.trim(news_icon_url.val()) == '') {
+        layer.msg('图标不能为空');
+        return false;
+    }
+    if(content == '') {
+        layer.msg('内容不能为空');
+        return false;
+    }
+
+    form.submit();
+});
