@@ -14,7 +14,7 @@
         <div class="form-group">
             <label for="file-4" class="col-sm-2 control-label">图标</label>
             <div class="col-sm-10">
-                <input id="file-4" type="file" name="news_icon" class="file" data-upload-url="{:U('File/upload')}">
+                <input id="file-4" type="file" name="news_icon" class="file" data-upload-url="{:U('File/upload')}" value="{$bean.news_icon_url}">
                 <input id="file-4-value" name="news_icon_url" value="{$bean.news_icon_url}" type="hidden">
             </div>
         </div>

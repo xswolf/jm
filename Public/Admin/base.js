@@ -44,7 +44,13 @@ $(function () {
 })
 
 //文件上传
-$("#file-4").fileinput({'showUpload':true, 'previewFileType':'any'});
+$("#file-4").fileinput({
+    initialPreview: [
+
+        "<img src='"+$("#file-4").attr('value')+"' class='file-preview-image' />"
+
+    ]
+});
 $('#file-4').on('fileuploaded', function(event, file, previewId, index, reader) {
     $('#file-4-value').attr({value:file.response.imgurl});
 });
