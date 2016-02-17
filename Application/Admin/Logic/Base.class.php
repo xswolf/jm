@@ -15,7 +15,7 @@ class Base
     static $instance = null;
 
     public function lists($table , $offset = "" , $length=10){
-        $m = M($table);
+        $m = M($table)->where('status=1');
         if ($offset != ''){
             $m->limit($offset , $length);
         }
