@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+.contact_content{
+    background-image: url(/Public/Home/images/contact_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 1080px;
+}
+.main_content{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+.main_img{
+    max-width: 100%;
+    min-width: 320px;
+}

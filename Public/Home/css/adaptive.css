@@ -12,7 +12,7 @@
 
 }
 @media only screen and (min-width: 1024px) and (max-width: 1279px){
-    .fullpage-wrapper .main_content, .ft .ft_content{ width: 100%;}
+    .fullpage-wrapper .contact_content .main_content, .ft .ft_content{ width: 100%;}
     /* 第一屏 */
     img.one{ top: 6%;  width: 49%; }
     .v1 .txt_box{ left: 2%;  padding: 0;  top: 23%;  width: 36%; }
@@ -20,9 +20,11 @@
     .header_menu .header_nav li a{ padding: 0 15px;}
     .header_menu .header_nav{ margin-left: 85px;}
 
+    .contact_content .main_content{ width: 100%;}
+
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px){
-    .fullpage-wrapper .main_content, .ft .ft_content{ width: 100%;}
+    .fullpage-wrapper .contact_content .main_content, .ft .ft_content{ width: 100%;}
     /* 第一屏 */
     img.one{ top: 8%;  width: 40%; }
     .v1 .txt_box{height: 259px;  left: 3%;  padding: 0;  top: 125px;  width: 405px;}
@@ -51,9 +53,10 @@
     .v4 .am4_1{ width: 90%;}
     .v4 .am4_2{ font-size: 16px;}
 
+    .contact_content .main_content{ width: 100%;}
 }
 @media only screen and (min-width: 640px) and (max-width: 767px){
-    .fullpage-wrapper .main_content, .ft .ft_content{ width: 100%;}
+    .fullpage-wrapper .contact_content .main_content, .ft .ft_content{ width: 100%;}
     /* 第一屏 */
     img.one{ bottom: 10%;  right: 0;  top: auto;  width: 53%;}
     .v1 .txt_box{left: 2%;  top: 17%;  width: 57%;}
@@ -89,9 +92,11 @@
     .ft{height: 12%;}
     div.footer{ height: 110px;}
     .footer .ft_wxcode{ display: none;}
+
+    .contact_content .main_content{ width: 100%;}
 }
 @media only screen and (min-width: 320px) and (max-width: 639px) {
-    .fullpage-wrapper .main_content, .ft .ft_content{ width: 100%;}
+    .fullpage-wrapper .contact_content .main_content, .ft .ft_content{ width: 100%;}
     /* 第一屏 */
     img.one{bottom: 5%;  right: 0;  top: auto;  width: 65%;}
     .v1 .txt_box{height: 34%;  left: 3%;  top: 14%;  width: 80%;}
@@ -134,9 +139,12 @@
     .footer .ft_content .content{ margin-top: 0;}
     .wximg{width: 80px; }
     .footer .ft_wxcode{ display: none;}
+
+    .contact_content .main_content{ width: 100%;}
+    .contact_content .main_content .main_img{ margin-top: 100px;}
 }
 @media only screen and (max-width: 319px) {
-    .fullpage-wrapper .main_content, .ft .ft_content{ width: 100%;}
+    .fullpage-wrapper .contact_content .main_content, .ft .ft_content{ width: 100%;}
     /* 第一屏 */
     img.one{bottom: 5%;  right: 0;  top: auto;  width: 65%;}
     .v1 .txt_box{height: 34%;  left: 3%;  top: 14%;  width: 80%;}
@@ -181,5 +189,8 @@
     .syn_img{min-width: 320px; }
     .wximg{width: 80px; }
     .footer .ft_wxcode{ display: none;}
+
+    .contact_content .main_content{ width: 100%;}
+    .contact_content .main_content .main_img{ margin-top: 38%;}
 }
 
