@@ -11,9 +11,9 @@ define(['fullpage','excoloSlider'],
                            $('.am1_2').show().addClass('bounceInLeft');
                            setTimeout(function(){
                                $('.am1_3').show().addClass('fadeIn');
-                           },800);
-                       },800);
-                   },800);
+                           },300);
+                       },300);
+                   },300);
                },100);
                $('#dowebok').fullpage({
                    afterRender:function(){
@@ -42,9 +42,9 @@ define(['fullpage','excoloSlider'],
                                        $('.am2_3').show().addClass('bounceInLeft');
                                        setTimeout(function(){
                                            $('.am2_4').show().addClass('bounceInLeft');
-                                       },800);
-                                   },800);
-                               },800);
+                                       },300);
+                                   },300);
+                               },300);
                            },100);
                        }
                        if(index == 3){
@@ -57,9 +57,9 @@ define(['fullpage','excoloSlider'],
                                        $('.am3_2').show().addClass('fadeIn');
                                        setTimeout(function(){
                                            $('.am3_3').show().addClass('fadeIn');
-                                       },800);
-                                   },800);
-                               },800);
+                                       },300);
+                                   },300);
+                               },300);
                            },100);
                        }
                        if(index == 4){
