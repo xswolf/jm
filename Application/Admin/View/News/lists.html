@@ -29,7 +29,7 @@
                                 <td class="text-center">{$vo.id}</td>
                                 <td class="text-center">{$vo.news_type_id|getNewsTypeName}</td>
                                 <td class="text-center">{$vo.title}</td>
-                                <td class="text-center">{$vo.content}</td>
+                                <td class="text-center">{$vo.content|mb_substr=0,21}...</td>
                                 <td class="text-center">{$vo.status|getNewsStatus}</td>
                                 <td class="text-center">
                                     <a href="{:U('News/save','id='.$vo['id'])}"><button type="button" class="btn btn-primary">编辑</button></a>
