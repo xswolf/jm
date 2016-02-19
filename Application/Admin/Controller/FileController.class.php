@@ -28,7 +28,13 @@ class FileController extends BaseController
             $this->error($upload->getError());
         }else{// 上传成功
             //返回绝对路径
-            $url = substr($upload->rootPath,1).$info['news_icon']['savepath'].$info['news_icon']['savename'];
+            $url = $upload->rootPath.$info['news_icon']['savepath'].$info['news_icon']['savename'];
+            $image = new \Think\Image();
+            $image->open($url);
+            //另存最大宽度是240的压缩图片
+            $image->thumb(240,240)->save($url);
+            //返回绝对路径
+            $url = substr($url,1);
             $return  = array('status' => 1, 'info' => '上传成功', 'imgurl' => $url);
             $this->ajaxReturn($return);
         }
