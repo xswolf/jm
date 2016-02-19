@@ -17,7 +17,7 @@
     img.one{ top: 6%;  width: 49%; }
     .v1 .txt_box{ left: 2%;  padding: 0;  top: 23%;  width: 36%; }
     .header_menu{ width: 1024px;}
-    .header_menu .header_nav li a{ padding: 0 15px;}
+    .header_menu .header_nav li .nav_a{ padding: 0 15px;}
     .header_menu .header_nav{ margin-left: 85px;}
 
     .contact_content .main_content{ width: 100%;}
@@ -29,7 +29,7 @@
     img.one{ top: 8%;  width: 40%; }
     .v1 .txt_box{height: 259px;  left: 3%;  padding: 0;  top: 125px;  width: 405px;}
     .header_menu{ width: 768px;}
-    .header_menu .header_nav li a{ padding: 0 10px; font-size: 14px}
+    .header_menu .header_nav li .nav_a{ padding: 0 10px; font-size: 14px}
     .header_menu .header_nav{ margin-left: 24px;}
     .header_menu .header_logo{ display: none;}
 
@@ -63,7 +63,7 @@
     .header_menu .header_logo{ display: none;}
     .header_menu .header_nav{ margin-left: 0;}
     .home_header{ height: 80px; line-height: 80px;}
-    .header_menu .header_nav li a{ font-size: 12px; padding: 0 15px;}
+    .header_menu .header_nav li .nav_a{ font-size: 12px; padding: 0 15px;}
     .header_tell{ float: left; margin-left: 32px;}
     .icon_tell{ height: 80px;}
     .phone_tell{ font-size: 12px;}
@@ -107,7 +107,7 @@
     .header_menu .header_nav ul{ min-width: 320px; width: 100%;}
     .header_menu .header_nav li{ width: 20%; text-align: center; min-width: 40px;}
     .home_header{ height: 60px; line-height: 60px;}
-    .header_menu .header_nav li a{ font-size: 12px; padding: 0;}
+    .header_menu .header_nav li .nav_a{ font-size: 12px; padding: 0;}
     .header_tell{ display: none;}
 
     /* 第二屏 */
@@ -155,7 +155,7 @@
     .header_menu .header_nav ul{ min-width: 320px; width: 100%;}
     .header_menu .header_nav li{ width: 20%; text-align: center; min-width: 40px;}
     .home_header{ height: 60px; line-height: 60px;}
-    .header_menu .header_nav li a{ font-size: 12px; padding: 0;}
+    .header_menu .header_nav li .nav_a{ font-size: 12px; padding: 0;}
     .header_tell{ display: none;}
     #dowebok{ min-width: 320px;}
 

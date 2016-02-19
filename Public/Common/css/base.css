@@ -56,7 +56,7 @@ h1,h2,h3,h4,h5,h6 {font-size:100%;font-weight:500;
 .fn-right {float:right;}
 
 /* 链接默认状态  */
-a{color:#333; text-decoration:none;}  /* 默认不显示下划线，保持页面简洁 */
+a{color:#333; text-decoration:none; outline: none}  /* 默认不显示下划线，保持页面简洁 */
 a:hover{text-decoration:underline;}   /* 让链接在 hover 状态下显示下划线 
 
 /* 链接-灰色*/

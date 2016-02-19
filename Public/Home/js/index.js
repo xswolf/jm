@@ -1,4 +1,4 @@
-define(['jquery', 'fullpage'],
+define(['jquery', 'fullpage','excoloSlider'],
     function ($) {
         return {
            init:function(){
@@ -70,7 +70,31 @@ define(['jquery', 'fullpage'],
                $(document).on('click', '#gonext', function(){
                    $.fn.fullpage.moveSectionDown();
                });
-           }
+               $('.nav_a').each(function(){
+                   $(this).click(function(){
+                           $(this).next('.nav_option').toggle();
+                   })
+               })
+           },
+            loadImgSlider:function(){
+                $(function(){
+                    $("#slider_1").excoloSlider({height:300});
+                })
+            },
+            loadMenu:function(){
+
+                $('.menu__item').click(function(){
+                    var li = $(this).index()+1;
+                    $(this).addClass('menu__item--current').siblings().removeClass('menu__item--current');
+                    $('#slider_'+li).show().siblings('div').hide();
+                    if($('#slider_'+li).attr('data-load') != '1'){
+                        $("#slider_"+li).excoloSlider({height:300});
+                        $("#slider_"+li).attr('data-load','1');
+                    }
+
+                })
+
+            }
        }
 });
 

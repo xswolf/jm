@@ -6,3 +6,11 @@
 #dowebok .am_con{
     display: block !important;
 }
+
+.csslider1 > .cs_arrowprev > label:after,
+.csslider1 > .cs_arrownext > label:after {
+    line-height: 62px;
+}
+.csslider1 > .cs_play_pause > label:after {
+    line-height: 60px;
+}
