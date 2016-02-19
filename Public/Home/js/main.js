@@ -5,7 +5,6 @@ require.config({
     urlArgs: "bust=" + (new Date()).getTime(), // 清除缓存
     baseUrl: '/Public/Home/js',
     paths: {
-        jquery: 'jquery_1.8.3.min.js',
         fullpage: 'plugin/jquery/jquery.fullpage.min',
         excoloSlider: 'plugin/jquery/jquery.excoloSlider.min',
         adapt: 'plugin/jquery/adapt.min'

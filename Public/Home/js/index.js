@@ -82,7 +82,6 @@ define(['fullpage','excoloSlider'],
                 })
             },
             loadMenu:function(){
-
                 $('.menu__item').click(function(){
                     var li = $(this).index()+1;
                     $(this).addClass('menu__item--current').siblings().removeClass('menu__item--current');
