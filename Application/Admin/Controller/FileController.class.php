@@ -17,6 +17,11 @@ class FileController extends BaseController
         $upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
         $upload->rootPath  =     './Public/web_image/'; // 设置附件上传根目录
         $upload->savePath  =     ''; // 设置附件上传（子）目录
+
+        //判断当前文件夹是否存在，不存在则创建此文件夹
+        if(!file_exists($upload->rootPath)) {
+            mkdir($upload->rootPath);
+        }
         // 上传文件
         $info   =   $upload->upload();
         if(!$info) {// 上传错误提示错误信息
