@@ -36,8 +36,8 @@
         /* Default Configuration
         **********************************************************/
         defaults: {
-            width: 800,
-            height: 530,
+            width: 1600,
+            height: 500,
             autoSize: true,
             touchNav: true,
             mouseNav: true,

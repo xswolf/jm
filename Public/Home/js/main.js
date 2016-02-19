@@ -6,7 +6,7 @@ require.config({
     baseUrl: '/Public/Home/js',
     paths: {
         fullpage: 'plugin/jquery/jquery.fullpage.min',
-        excoloSlider: 'plugin/jquery/jquery.excoloSlider.min',
+        excoloSlider: 'plugin/jquery/jquery.excoloSlider',
         adapt: 'plugin/jquery/adapt.min'
     }
 });
