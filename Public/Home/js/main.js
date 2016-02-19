@@ -5,15 +5,15 @@ require.config({
     urlArgs: "bust=" + (new Date()).getTime(), // 清除缓存
     baseUrl: '/Public/Home/js',
     paths: {
-        jquery: 'plugin/jquery/jquery_1.8.3.min',
+        jquery: 'jquery_1.8.3.min.js',
         fullpage: 'plugin/jquery/jquery.fullpage.min',
         excoloSlider: 'plugin/jquery/jquery.excoloSlider.min',
         adapt: 'plugin/jquery/adapt.min'
     }
 });
 
-define(['index'],
-    function (index) {
+define(['jquery_1.8.3.min','index'],
+    function (jquery,index) {
             index.init();
             index.loadImgSlider();
             index.loadMenu();

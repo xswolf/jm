@@ -1,5 +1,5 @@
-define(['jquery', 'fullpage','excoloSlider'],
-    function ($) {
+define(['fullpage','excoloSlider'],
+    function () {
         return {
            init:function(){
                $('#gonext').show();
