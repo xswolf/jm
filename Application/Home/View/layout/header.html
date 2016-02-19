@@ -9,19 +9,6 @@
 <link href="/Public/Home/css/adaptive.css" rel="stylesheet">
 <link href="/Public/Home/css/plugin/jquery/jquery.fullpage.min.css" rel="stylesheet">
 <script src="/Public/Home/js/plugin/requirejs/require.js" data-main="/Public/Home/js/main.js"></script>
-<script>
-    // Settings for Adaptive.js
-    var ADAPT_CONFIG = {
-        path: '/Public/Home/css/plugin/adapt/',
-        dynamic: true,
-        range: [
-            '0px    to 760px  = mobile.min.css',
-            '760px  to 980px  = 720.min.css',
-            '980px            = 960.min.css'
-        ]
-    };
-
-</script>
 <!--[if lt IE 9]>
 <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
 <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.js"></script>
@@ -39,12 +26,12 @@
                 <li><a class="nav_a {$actUrl == 'Index' ? 'on' : ''}" href="/Home/Index">首页</a></li>
                 <li><a class="nav_a {$actUrl == 'Superiority' ? 'on' : ''}" href="/Home/Superiority">嘉美优势</a></li>
                 <li>
-                    <a class="nav_a {$actUrl == 'Guide' ? 'on' : ''}" href="javascript:;">赴美优势</a>
-                    <div class="nav_option">
+                    <a class="nav_a {$actUrl == 'Benefit' ? 'on' : ''}" href="/Home/Benefit">赴美生子优势</a>
+                    <!--<div class="nav_option">
                         <i class="o_x"></i>
                         <a class="o_a" href="/Home/Guide">赴美指南</a>
                         <a class="o_a" href="/Home/Benefit">赴美生子优势</a>
-                    </div>
+                    </div>-->
                 </li>
                 <li><a class="nav_a {$actUrl == 'Synopsis' ? 'on' : ''}" href="/Home/Synopsis">关于嘉美</a></li>
                 <li><a class="nav_a {$actUrl == 'Contact' ? 'on' : ''}" href="/Home/Contact">联系我们</a></li>
