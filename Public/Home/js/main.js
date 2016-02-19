@@ -11,7 +11,7 @@ require.config({
     }
 });
 
-define(['jquery_1.8.3.min','index'],
+define(['jquery','index'],
     function (jquery,index) {
             index.init();
             index.loadImgSlider();
