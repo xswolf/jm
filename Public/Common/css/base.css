@@ -117,3 +117,4 @@ a:hover{text-decoration:underline;}   /* 让链接在 hover 状态下显示下�
 .mt20{ margin-top: 20px;}
 .mt30{ margin-top: 30px;}
 .clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.tac{ text-align: center;}

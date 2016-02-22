@@ -8,10 +8,11 @@
 <img class="sup_img" src="/Public/Home/images/sup_pic_03.jpg"/>
 <img class="sup_img" src="/Public/Home/images/sup_pic_04.jpg"/>
 <script>
-    require(['jquery','index'],
-            function (j,exc) {
-                exc.loadImgSlider();
-                exc.loadMenu();
+    require(['jquery','extend','index'],
+            function (jquery,extend,index) {
+                index.loadImgSlider();
+                index.loadMenu();
+                index.anchor();
             });
 
 </script>
@@ -19,13 +20,13 @@
     <section class="section section--menu" id="Ceres">
         <nav class="menu menu--ceres">
             <ul class="menu__list">
-                <li class="menu__item menu__item--current item1"><a href="javascript:;" class="menu__link">环境优势</a></li>
+                <li class="menu__item menu__item--current item1"><a  href="javascript:;" class="menu__link">环境优势</a></li>
                 <li class="menu__item item2"><a href="javascript:;" class="menu__link">膳食优势</a></li>
                 <li class="menu__item item3"><a href="javascript:;" class="menu__link">服务优势</a></li>
             </ul>
         </nav>
     </section>
-    <div id="slider_1" class="slider" style="display: block;" data-load="1">
+    <div name="tar" id="slider_1" class="slider" style="display: block;" data-load="1">
         <img src="/Public/Home/images/hj_01.jpg"/>
         <img src="/Public/Home/images/hj_02.jpg"/>
         <img src="/Public/Home/images/hj_03.jpg"/>
@@ -38,4 +39,3 @@
         <img src="/Public/Home/images/fuwu_02.jpg"/>
     </div>
 </div>
-

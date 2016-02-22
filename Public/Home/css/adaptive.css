@@ -25,6 +25,7 @@
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px){
     .fullpage-wrapper .contact_content .main_content, .ft .ft_content{ width: 100%;}
+    .nav_option .o_a{ font-size: 12px;}
     /* 第一屏 */
     img.one{ top: 8%;  width: 40%; }
     .v1 .txt_box{height: 259px;  left: 3%;  padding: 0;  top: 125px;  width: 405px;}
@@ -57,6 +58,7 @@
 }
 @media only screen and (min-width: 640px) and (max-width: 767px){
     .fullpage-wrapper .contact_content .main_content, .ft .ft_content{ width: 100%;}
+    .nav_option .o_a{ font-size: 12px;}
     /* 第一屏 */
     img.one{ bottom: 10%;  right: 0;  top: auto;  width: 53%;}
     .v1 .txt_box{left: 2%;  top: 17%;  width: 57%;}
@@ -97,6 +99,7 @@
 }
 @media only screen and (min-width: 320px) and (max-width: 639px) {
     .fullpage-wrapper .contact_content .main_content, .ft .ft_content{ width: 100%;}
+    .nav_option .o_a{ font-size: 12px;}
     /* 第一屏 */
     img.one{bottom: 5%;  right: 0;  top: auto;  width: 65%;}
     .v1 .txt_box{height: 34%;  left: 3%;  top: 14%;  }
@@ -145,6 +148,7 @@
 }
 @media only screen and (max-width: 319px) {
     .fullpage-wrapper .contact_content .main_content, .ft .ft_content{ width: 100%;}
+    .nav_option .o_a{ font-size: 12px;}
     /* 第一屏 */
     img.one{bottom: 5%;  right: 0;  top: auto;  width: 65%;}
     .v1 .txt_box{height: 34%;  left: 3%;  top: 14%;  }

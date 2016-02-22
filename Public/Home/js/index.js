@@ -70,11 +70,6 @@ define(['fullpage','excoloSlider'],
                $(document).on('click', '#gonext', function(){
                    $.fn.fullpage.moveSectionDown();
                });
-               $('.nav_a').each(function(){
-                   $(this).click(function(){
-                           $(this).next('.nav_option').toggle();
-                   })
-               })
            },
             loadImgSlider:function(){
                 $(function(){
@@ -92,10 +87,36 @@ define(['fullpage','excoloSlider'],
                     }
 
                 })
-
+            },
+            anchor:function(){
+                $(function(){
+                    var tar = getUrlParam('tar');
+                    switch(tar){
+                        case 'hj':
+                                $('html,body').animate({ scrollTop: $('#Ceres').offset().top}, 'slow');
+                                $('.item1>a').trigger('click');
+                            break;
+                        case 'ss':
+                                $('html,body').animate({ scrollTop: $('#Ceres').offset().top}, 'slow');
+                                $('.item2>a').trigger('click');
+                            break;
+                        case 'fw':
+                                $('html,body').animate({ scrollTop: $('#Ceres').offset().top}, 'slow');
+                                $('.item3>a').trigger('click');
+                            break;
+                    }
+                });
+            },
+            headerMenu:function(){
+                $('.nav_a').each(function(){
+                    $(this).click(function(){
+                        $(this).next('.nav_option').toggle();
+                    })
+                })
             }
        }
 });
+
 
 
 

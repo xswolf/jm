@@ -34,7 +34,7 @@
     position: relative;
 }
 .nav_option{
-    width: 130px;
+    width: 100%;
     height: auto;
     position: absolute;
     top: 100px;
@@ -48,7 +48,7 @@
     height: 10px;
     position: absolute;
     top: -10px;
-    width: 130px;
+    width: 100%;
 }
 .nav_option .o_a{
     font-size: 14px;
@@ -197,7 +197,9 @@
     top: 212px;
     width: 570px;
     z-index: 10;
+    cursor: pointer;
 }
+
 .two{
     height: 100%;
     width: auto;
