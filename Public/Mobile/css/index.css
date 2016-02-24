@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+
+.jm-main{
+    margin: 0 auto;
+    max-width: 640px;
+    min-width: 320px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.jm_mb_header{
+    background: #f1f1f1;
+    border-bottom: 1px solid #dcdcdc;
+    padding: 10px 0;
+    position: relative;
+    text-align: center;
+}
+.jm_logo{
+    margin: 0 auto;
+    display: block;
+    height: 34px;
+}
+.sprite_menu{
+    background: url(/Public/Mobile/images/sprite_01.png) no-repeat center;
+    height: 33px;
+    width: 34px;
+    float: left;
+    margin-left: 3%;
+}
+.sprite_phone{
+    background: url(/Public/Mobile/images/sprite_02.png) no-repeat center;
+    height: 33px;
+    width: 34px;
+    float: right;
+    margin-right: 3%;
+}
