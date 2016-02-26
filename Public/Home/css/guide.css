@@ -119,11 +119,11 @@
 .con_right .r_content p{
     color: #996c33;
     line-height: 39px;
+    font-size: 14px;
 }
 .con_right .r_content p.imp{
     color: #e4007f;
     text-decoration: underline;
-    font-size: 14px;
 }
 .gui_bot{
     background: #fffbf5;

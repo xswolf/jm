@@ -1,41 +1,22 @@
-<link href="/Public/Home/css/superiority.css" rel="stylesheet"/>
-<link href="/Public/Home/css/plugin/menu/component.css" rel="stylesheet"/>
-<link href="/Public/Home/css/plugin/menu/default.css" rel="stylesheet"/>
-<link href="/Public/Home/css/plugin/menu/normalize.css" rel="stylesheet"/>
-<link href="/Public/Home/css/plugin/jquery/jquery.excoloSlider.css" rel="stylesheet"/>
-<img class="sup_img" src="/Public/Home/images/sup_pic_01.jpg"/>
-<img class="sup_img" src="/Public/Home/images/sup_pic_02.jpg"/>
-<img class="sup_img" src="/Public/Home/images/sup_pic_03.jpg"/>
-<img class="sup_img" src="/Public/Home/images/sup_pic_04.jpg"/>
 <script>
-    require(['jquery','index'],
-            function (j,exc) {
-                exc.loadImgSlider();
-                exc.loadMenu();
-            });
-
 </script>
-<div class="sup_img_list">
-    <section class="section section--menu" id="Ceres">
-        <nav class="menu menu--ceres">
-            <ul class="menu__list">
-                <li class="menu__item menu__item--current item1"><a href="javascript:;" class="menu__link">环境优势</a></li>
-                <li class="menu__item item2"><a href="javascript:;" class="menu__link">膳食优势</a></li>
-                <li class="menu__item item3"><a href="javascript:;" class="menu__link">服务优势</a></li>
+
+<div class="sup_main">
+    <div class="main_img tac">
+        <img src="/Public/Mobile/images/sup_pic_01.jpg">
+        <img class="mt30" src="/Public/Mobile/images/sup_pic_02.png">
+        <img class="m30a" src="/Public/Mobile/images/sup_pic_03.png">
+    </div>
+    <div class="main_con">
+        <div class="con_t">
+            <ul class="clearfix">
+                <li><a href="javascript:;" >环境优势</a> </li>
+                <li>膳食优势</li>
+                <li>服务优势</li>
             </ul>
-        </nav>
-    </section>
-    <div id="slider_1" class="slider" style="display: block;" data-load="1">
-        <img src="/Public/Home/images/hj_01.jpg"/>
-        <img src="/Public/Home/images/hj_02.jpg"/>
-        <img src="/Public/Home/images/hj_03.jpg"/>
+        </div>
     </div>
-    <div id="slider_2" class="slider" data-load="0">
-        <img src="/Public/Home/images/shanshi_01.jpg"/>
-    </div>
-    <div id="slider_3" class="slider" data-load="0">
-        <img src="/Public/Home/images/fuwu_01.jpg"/>
-        <img src="/Public/Home/images/fuwu_02.jpg"/>
-    </div>
+</div>
+
 </div>
 

@@ -120,3 +120,5 @@ a:hover{text-decoration:underline;}   /* 让链接在 hover 状态下显示下�
 .tac{ text-align: center;}
 .m10{ margin: 10px;}
 .fwb{ font-weight: bold;}
+.white{background: #fff;}
+.m30a{ margin: 30px auto;}

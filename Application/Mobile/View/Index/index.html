@@ -1,101 +1,31 @@
-<link href="/Public/Home/css/plugin/animate/animate.min.css" rel="stylesheet">
+<link href="/Public/Mobile/css/jquery.fullpage.min.css" rel="stylesheet">
 <script>
-    require(['jquery','index'],
-            function (j,index) {
-                index.init();
+    require(['jquery','fullpage','public'],
+            function (j,f,p) {
+                p.index();
             });
 </script>
 <div id="dowebok" class="fullpage-wrapper">
     <div class="section">
-        <div class="bg" style=" visibility: visible; background-image:url(/Public/Home/images/home_01_bg.jpg);"></div>
-        <div class="main_content v1 pr">
-            <div class="txt_box animated pr" style="background: url(/Public/Home/images/home_01_t_bg.png) no-repeat;  display: none;">
-                <img class="am_con am1_1 animated fn-left" src="/Public/Home/images/home_01_t1.png" />
-                <img class="am_con am1_2 animated fn-left" src="/Public/Home/images/home_01_t2.png" />
-                <img class="am_con am1_3 animated fn-left" src="/Public/Home/images/home_01_t3.png" />
-            </div>
-        </div>
-        <img class="list one" src="/Public/Home/images/home_01_l.png" />
+       <div class="bg_1 bg tac">
+           <img class="pic_1 pic" src="/Public/Mobile/images/index_pic_01.png" />
+       </div>
     </div>
     <div class="section" style="display: none;">
-        <div class="bg" data-bglazy="/Public/Home/images/home_02_bg.jpg" style=" visibility: visible; "></div>
-        <div class="main_content v2 pr">
-            <div class="txt_box animated pr" data-bglazy="/Public/Home/images/home_02_t1.png" style=" display: none;">
-                <img class="am_con am2_2 fn-left animated" data-lazy="/Public/Home/images/home_02_t2.png" src="."/>
-                <img class="am_con am2_3 fn-left animated" data-lazy="/Public/Home/images/home_02_t3.png" src="."/>
-                <img class="am_con am2_4 fn-left animated" data-lazy="/Public/Home/images/home_02_t4.png" src="."/>
-            </div>
+        <div class="bg_2 bg">
+            <img class="pic_2 pic" src="/Public/Mobile/images/index_pic_02.png" />
         </div>
-        <img class="list two" data-lazy="/Public/Home/images/home_02_l.png" src="." />
-
     </div>
     <div class="section" style="display: none;">
-        <div class="bg" data-bglazy="/Public/Home/images/home_03_bg.jpg" style=" visibility: visible;"></div>
-        <div class="main_content v3 pr">
-            <div class="txt_box animated pr" data-bglazy="/Public/Home/images/home_03_t1.png" style=" display: none;">
-                <a href="/Home/Superiority">
-                    <img class="am_con am3_1 t120 animated" data-lazy="/Public/Home/images/home_03_t2.png" src="."/>
-                </a>
-                <a href="/Home/Superiority">
-                    <img class="am_con am3_2 t120 animated" data-lazy="/Public/Home/images/home_03_t3.png" src="."/>
-                </a>
-                <a href="/Home/Superiority">
-                    <img class="am_con am3_3 t120 animated" data-lazy="/Public/Home/images/home_03_t4.png" src="."/>
-                </a>
-            </div>
+        <div class="bg_3 bg">
+            <img class="pic_3 pic" src="/Public/Mobile/images/index_pic_03.png" />
         </div>
-        <img class="list three" data-lazy="/Public/Home/images/home_03_l.png" src="." />
-
     </div>
     <div class="section" style="display: none;">
-        <div class="bg" data-bglazy="/Public/Home/images/home_04_bg.jpg" style=" visibility: visible; "></div>
-        <img class="list four" data-lazy="/Public/Home/images/home_04_l.png" src="." />
-        <div class="main_content v4 pr">
-            <div class="txt_box pr" data-bglazy="/Public/Home/images/home_04_t_bg.png" style="">
-                <img class="am4_1" data-lazy="/Public/Home/images/home_04_t1.png" src=".">
-                <p class="am4_2 f_def f_20 f_wryh lh48">嘉美月子中心是中国和美国两地合法注册的直营机构</p>
-                <div class="phone clearfix">
-                    <div class="l_box fn-left">
-                        <img class="icon_tel" data-lazy="/Public/Home/images/home_04_t2.png" src=".">
-                    </div>
-                    <div class="r_box fn-left ml15">
-                        <p class="f_wryh">美国直拨电话：950-404-93054（按市话计费）</p>
-                        <p class="f_wryh">国内咨询电话：023-66299210</p>
-                    </div>
-                </div>
-                <div class="sp-line fn-left"></div>
-                <div class="wechat fn-left">
-                    <div class="l_box fn-left">
-                        <img class="icon_tel" data-lazy="/Public/Home/images/home_04_t3.png" src=".">
-                    </div>
-                    <div class="r_box fn-left ml15">
-                        <p class="f_wryh lh24">微信咨询：candy4231022</p>
-                    </div>
-                </div>
-                <img class="ml30 wximg" data-lazy="/Public/Home/images/wx_code.jpg" src="."/>
-                <p class="ml10">（扫一扫，直接与美国主管沟通）</p>
-            </div>
+        <div class="bg_4 bg">
+            <img class="pic_4 pic" src="/Public/Mobile/images/index_pic_04.png" />
         </div>
+      </div>
 
-        <div class="ft">
-            <div class="ft_content">
-                <ul>
-                    <li><a href="/Home/Index">嘉美首页</a></li>
-                    <li><a href="/Home/Superiority">嘉美优势</a></li>
-                    <li><a href="/Home/Guide">赴美指南</a></li>
-                    <li><a href="/Home/Synopsis">关于嘉美</a></li>
-                    <li><a href="/Home/Contact">联系我们</a></li>
-                    <li><a href="http://www.baihey.com" target="_blank">嘉瑞百合缘</a></li>
-                </ul>
-                <br />
-                <p>地址：重庆市渝中区大坪正街118号嘉华鑫城A幢11-11  </p>
-                <p>美国直拨热线：950-404-93054</p>
-                <p>国内咨询电话：023-62299210</p>
-                <p>渝ICP备16001265号-1</p>
-                <p>重庆嘉美出国服务有限公司版权所有</p>
-            </div>
-        </div>
-    </div>
 </div>
-<a id="gonext" class="go-next" href="javascript:;" ></a>
 </div>

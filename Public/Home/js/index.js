@@ -73,7 +73,9 @@ define(['fullpage','excoloSlider'],
            },
             loadImgSlider:function(){
                 $(function(){
-                    $("#slider_1").excoloSlider();
+                    $("#slider_1").excoloSlider({
+                        autoPlay:false
+                    });
                 })
             },
             loadMenu:function(){

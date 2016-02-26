@@ -6,49 +6,42 @@
     <title>嘉美月子</title>
 <link href="/Public/Common/css/base.css" rel="stylesheet">
 <link href="/Public/Mobile/css/index.css" rel="stylesheet">
-<link href="/Public/Home/css/plugin/jquery/jquery.fullpage.min.css" rel="stylesheet">
-<script src="/Public/Home/js/plugin/requirejs/require.js" data-main="/Public/Home/js/main.js"></script>
+<script src="/Public/Home/js/plugin/requirejs/require.js" data-main="/Public/Mobile/js/main.js"></script>
 <!--[if lt IE 9]>
 <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
 <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.js"></script>
 <script src="/Public/Common/js/css3-mediaqueries.js"></script>
 <link href="/Public/Common/css/ie.css" rel="stylesheet">
 <![endif]-->
-
+<script>
+    require(['jquery','public'],
+            function($,pub){
+                pub.hdrInit();
+    })
+</script>
 </head>
 <body>
 <div class="jm-main">
-    <header class="jm_mb_header tac">
-        <span class="sprite_menu"></span>
-        <div class="menu_box"></div>
-        <span class="sprite_phone"></span>
+    <header class="jm_mb_header tac pr">
+        <div class="sprite_menu">
+            <img src="/Public/Mobile/images/sprite_01.png" style="margin-top: 15px;">
+        </div>
+        <!--<span class="sprite_menu"></span>-->
+        <div id="menu_box">
+            <a class="{$actUrl == 'Index' ? 'on' : ''}" href="/Mobile/Index">首页</a>
+            <a class="{$actUrl == 'Superiority' ? 'on' : ''}" href="/Mobile/Superiority">嘉美优势</a>
+            <a class="{$actUrl == 'Benefit' ? 'on' : ''}" href="/Mobile/Benefit">赴美生子优势</a>
+            <a class="{$actUrl == 'Synopsis' ? 'on' : ''}" href="/Mobile/Synopsis">关于嘉美</a>
+            <a class="{$actUrl == 'Contact' ? 'on' : ''}" href="/Mobile/Contact">联系我们</a>
+        </div>
+        <div class="sprite_phone">
+            <img src="/Public/Mobile/images/sprite_02.png" style="margin-top: 10px;">
+        </div>
+        <div id="phone_box">
+            <h2>美国直拨电话：950-404-93054</h2>
+            <span>（拨打时间：7:30-15:30）</span>
+        </div>
         <img class="jm_logo" src="/Public/Mobile/images/logo.png" />
     </header>
-
-<!--<header class="home_header">
-    <div class="header_menu">
-        <div class="header_logo"></div>
-        <div class="header_nav">
-            <ul class="clearfix">
-                <li><a class="nav_a {$actUrl == 'Index' ? 'on' : ''}" href="/Home/Index">首页</a></li>
-                <li><a class="nav_a {$actUrl == 'Superiority' ? 'on' : ''}" href="/Home/Superiority">嘉美优势</a></li>
-                <li>
-                    <a class="nav_a {$actUrl == 'Benefit' ? 'on' : ''}" href="/Home/Benefit">赴美生子优势</a>
-                    &lt;!&ndash;<div class="nav_option">
-                        <i class="o_x"></i>
-                        <a class="o_a" href="/Home/Guide">赴美指南</a>
-                        <a class="o_a" href="/Home/Benefit">赴美生子优势</a>
-                    </div>&ndash;&gt;
-                </li>
-                <li><a class="nav_a {$actUrl == 'Synopsis' ? 'on' : ''}" href="/Home/Synopsis">关于嘉美</a></li>
-                <li><a class="nav_a {$actUrl == 'Contact' ? 'on' : ''}" href="/Home/Contact">联系我们</a></li>
-            </ul>
-        </div>
-        <div class="header_tell">
-            <i class="icon_tell"></i>
-            <span class="txt_tell">美国直拨电话： <span class="phone_tell">950-404-93054</span><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（拨打时间：7:30-15:30）</span>
-        </div>
-    </div>
-</header>-->
 
 

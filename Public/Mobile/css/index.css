@@ -13,25 +13,158 @@
     background: #f1f1f1;
     border-bottom: 1px solid #dcdcdc;
     padding: 10px 0;
-    position: relative;
+    position: fixed;
     text-align: center;
+    width: 100%;
+    max-width: 640px;
+    min-width: 320px;
+    margin: 0 auto;
+    z-index: 9999;
 }
 .jm_logo{
     margin: 0 auto;
     display: block;
     height: 34px;
 }
+.sprite_menu,.sprite_phone{
+    height: 55px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 70px;
+    cursor: pointer;
+}
 .sprite_menu{
-    background: url(/Public/Mobile/images/sprite_01.png) no-repeat center;
-    height: 33px;
-    width: 34px;
-    float: left;
-    margin-left: 3%;
+    left: 0;
 }
 .sprite_phone{
-    background: url(/Public/Mobile/images/sprite_02.png) no-repeat center;
-    height: 33px;
-    width: 34px;
-    float: right;
-    margin-right: 3%;
+    right: 0;
 }
+#menu_box{
+    position: absolute;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    top: 55px;
+    display: none;
+}
+#menu_box a{
+    display: inline-block;
+    line-height: 40px;
+    height: 40px;
+    width: 100%;
+    border-bottom: 1px solid #dedede;
+    color: #b28850;
+    text-align: center;
+    font-weight: bold;
+    background: #fff;
+}
+#menu_box a:hover{
+    text-decoration: none;
+}
+
+#phone_box{
+    position: absolute;
+    right: 0;
+    z-index: 99;
+    width: 100%;
+    top: 55px;
+    border-bottom: 1px solid #dedede;
+    background: #fff;
+    padding: 20px 0;
+    display: none;
+}
+#phone_box h2{
+    font-size: 22px;
+    color: #b28850;
+}
+#phone_box span{
+    font-size: 20px;
+    color: #b28850;
+}
+#menu_box a.on{
+    color: #e4007f;
+}
+
+/* ================================Index================================ */
+.bg{
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    background-position: 0 55px;
+    text-align: center;
+
+}
+
+.bg_1{
+    background-image:url(/Public/Mobile/images/index_pic_01_bg.jpg);
+}
+
+.bg_2{
+    background-image:url(/Public/Mobile/images/index_pic_02_bg.jpg);
+}
+
+.bg_3{
+    background-image:url(/Public/Mobile/images/index_pic_03_bg.jpg);
+}
+
+.bg_4{
+    background-image:url(/Public/Mobile/images/index_pic_04_bg.jpg);
+}
+
+.pic{
+    vertical-align: middle;
+    margin-top: 80px;
+    max-width: 100%;
+}
+.pic_1{
+
+}
+.pic_2{
+    margin-top: 130px;
+}
+.pic_3{
+
+}
+.pic_4{
+
+}
+/* ================================Superiority================================ */
+.sup_main{
+    width: 100%;
+    margin: 0 auto;
+}
+.main_img{
+    margin-top: 55px;
+}
+.main_img img{
+    vertical-align: middle;
+    max-width: 100%;
+}
+.mian_con{
+
+}
+.con_t{
+    height: 50px;
+    line-height: 50px;
+    background: #cfa972;
+
+}
+.con_t ul{
+
+}
+.con_t ul li{
+    color: #f6f6f6;
+    cursor: pointer;
+    float: left;
+    font-family: 微软雅黑;
+    font-size: 18px;
+    padding: 0 7%;
+}
+.con_t ul li:last-child{
+    border-right: 0;
+    padding-right: 0;
+}
+
+/* ================================Superiority/================================ */
