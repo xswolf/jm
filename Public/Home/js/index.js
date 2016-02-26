@@ -84,7 +84,7 @@ define(['fullpage','excoloSlider'],
                     $(this).addClass('menu__item--current').siblings().removeClass('menu__item--current');
                     $('#slider_'+li).show().siblings('div').hide();
                     if($('#slider_'+li).attr('data-load') != '1'){
-                        $("#slider_"+li).excoloSlider();
+                        $("#slider_"+li).excoloSlider({autoPlay:false});
                         $("#slider_"+li).attr('data-load','1');
                     }
 
