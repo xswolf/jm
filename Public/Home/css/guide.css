@@ -19,6 +19,7 @@
 .con_left{
     width: 200px;
     float: left;
+    height: 885px;
 }
 .con_left .l_t_img{
     background: url(/Public/Home/images/gui_list_t.jpg) no-repeat;
@@ -118,8 +119,9 @@
 }
 .con_right .r_content p{
     color: #996c33;
-    line-height: 39px;
     font-size: 14px;
+    line-height: 28px;
+    text-indent: 28px;
 }
 .con_right .r_content p.imp{
     color: #e4007f;
