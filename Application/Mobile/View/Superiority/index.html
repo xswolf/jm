@@ -1,4 +1,8 @@
 <script>
+    require(['jquery','excoloSlider','public'],
+            function (j,e,p) {
+                p.superiority();
+            });
 </script>
 
 <div class="sup_main">
@@ -8,12 +12,27 @@
         <img class="m30a" src="/Public/Mobile/images/sup_pic_03.png">
     </div>
     <div class="main_con">
-        <div class="con_t">
-            <ul class="clearfix">
-                <li><a href="javascript:;" >环境优势</a> </li>
-                <li>膳食优势</li>
-                <li>服务优势</li>
-            </ul>
+        <div class="con_t tac">
+            <a class="on" href="javascript:;">环境优势<i></i></a>
+            <a  href="javascript:;">膳食优势<i></i></a>
+            <a  href="javascript:;">服务优势<i></i></a>
+        </div>
+        <div class="w100">
+        <div class="m20a con_i" style="width: 592px; max-width: 100%;">
+            <div id="slider_1" class="slider" >
+                <img src="/Public/Mobile/images/sup_hj_01.png">
+                <img src="/Public/Mobile/images/sup_hj_02.png">
+                <img src="/Public/Mobile/images/sup_hj_03.png">
+                <img src="/Public/Mobile/images/sup_hj_04.png">
+            </div>
+            <div id="slider_2" class="slider" style="display: none;">
+                <img src="/Public/Mobile/images/sup_ss_01.png">
+            </div>
+            <div id="slider_3" class="slider" style="display: none; height: 505px">
+                <img src="/Public/Mobile/images/sup_fw_01.png">
+                <img src="/Public/Mobile/images/sup_fw_02.png">
+            </div>
+        </div>
         </div>
     </div>
 </div>

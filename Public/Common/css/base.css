@@ -122,3 +122,7 @@ a:hover{text-decoration:underline;}   /* 让链接在 hover 状态下显示下�
 .fwb{ font-weight: bold;}
 .white{background: #fff;}
 .m30a{ margin: 30px auto;}
+.m20a{ margin: 20px auto;}
+.m10a{ margin: 10px auto;}
+.w100{width: 100%;}
+.m0a{ margin: 0 auto;}

@@ -44,6 +44,15 @@ define(
                         }
                     }
                 });
+            },
+            superiority:function(){
+                $('#slider_1,#slider_2').excoloSlider();
+                $('#slider_3').excoloSlider({ height:505});
+                $('.con_t a').click(function(){
+                    $(this).addClass('on').siblings().removeClass('on');
+                    var index = $(this).index();
+                    $('.con_i').find('.slider').eq(index).show().siblings().hide();
+                })
             }
         }
     });

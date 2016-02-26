@@ -6,7 +6,8 @@ require.config({
     baseUrl: '/Public/Mobile/js',
     paths: {
         jquery: 'jquery',
-        fullpage: 'fullpage'
+        fullpage: 'fullpage',
+        excoloSlider: 'excoloSlider'
     }
 });
 

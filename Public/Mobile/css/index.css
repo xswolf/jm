@@ -142,29 +142,45 @@
     vertical-align: middle;
     max-width: 100%;
 }
-.mian_con{
-
+.main_con{
+    background: #fbefea;
+    padding-bottom: 20px;
 }
 .con_t{
     height: 50px;
     line-height: 50px;
     background: #cfa972;
-
 }
-.con_t ul{
-
-}
-.con_t ul li{
+.con_t a{
+    border-right: 1px solid #fff;
     color: #f6f6f6;
-    cursor: pointer;
-    float: left;
     font-family: 微软雅黑;
     font-size: 18px;
-    padding: 0 7%;
+    padding: 0 4%;
+    position: relative;
 }
-.con_t ul li:last-child{
+.con_t a.on i{
+    background: url(/Public/Mobile/images/sup_icon_triangle.png) no-repeat;
+    width: 20px;
+    height: 10px;
+    display: block;
+    position: absolute;
+    top: 28px;
+    left: 51px;
+
+}
+.con_t a.on{
+   color: #996c33;
+}
+.con_t a:hover{
+    text-decoration: none;
+}
+.con_t a:last-child{
     border-right: 0;
-    padding-right: 0;
+}
+.slider img{
+    max-width: 100%;
+    min-width: 320px;
 }
 
 /* ================================Superiority/================================ */
