@@ -20,7 +20,7 @@ class NewsController extends BaseController
      */
     public function lists()
     {
-        $lists = News::instance()->lists('news');
+        $lists = News::instance()->lists('news' , '' , 10000);
 
         $this->assign('lists', $lists);
         $this->display();
