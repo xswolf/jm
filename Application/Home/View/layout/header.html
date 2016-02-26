@@ -15,7 +15,12 @@
 <script src="/Public/Common/js/css3-mediaqueries.js"></script>
 <link href="/Public/Common/css/ie.css" rel="stylesheet">
 <![endif]-->
-
+<script>
+    require(['jquery','index'],
+            function (jquery,index) {
+                index.headerMenu();
+            });
+</script>
 </head>
 <body>
 <header class="home_header">
@@ -26,12 +31,13 @@
                 <li><a class="nav_a {$actUrl == 'Index' ? 'on' : ''}" href="/Home/Index">首页</a></li>
                 <li><a class="nav_a {$actUrl == 'Superiority' ? 'on' : ''}" href="/Home/Superiority">嘉美优势</a></li>
                 <li>
-                    <a class="nav_a {$actUrl == 'Benefit' ? 'on' : ''}" href="/Home/Benefit">赴美生子优势</a>
-                    <!--<div class="nav_option">
+                    <a class="nav_a <?php echo ($actUrl == 'Benefit' || $actUrl == 'Guide' ? 'on' : ''); ?>" href="javascript:;">赴美生子优势</a>
+                    <div class="nav_option">
                         <i class="o_x"></i>
-                        <a class="o_a" href="/Home/Guide">赴美指南</a>
+                        <!-- /Home/Guide -->
+                        <a class="o_a" href="/Home/Guide">赴美生子费用</a>
                         <a class="o_a" href="/Home/Benefit">赴美生子优势</a>
-                    </div>-->
+                    </div>
                 </li>
                 <li><a class="nav_a {$actUrl == 'Synopsis' ? 'on' : ''}" href="/Home/Synopsis">关于嘉美</a></li>
                 <li><a class="nav_a {$actUrl == 'Contact' ? 'on' : ''}" href="/Home/Contact">联系我们</a></li>

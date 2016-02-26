@@ -11,9 +11,9 @@ define(['fullpage','excoloSlider'],
                            $('.am1_2').show().addClass('bounceInLeft');
                            setTimeout(function(){
                                $('.am1_3').show().addClass('fadeIn');
-                           },800);
-                       },800);
-                   },800);
+                           },300);
+                       },300);
+                   },300);
                },100);
                $('#dowebok').fullpage({
                    afterRender:function(){
@@ -42,9 +42,9 @@ define(['fullpage','excoloSlider'],
                                        $('.am2_3').show().addClass('bounceInLeft');
                                        setTimeout(function(){
                                            $('.am2_4').show().addClass('bounceInLeft');
-                                       },800);
-                                   },800);
-                               },800);
+                                       },300);
+                                   },300);
+                               },300);
                            },100);
                        }
                        if(index == 3){
@@ -57,9 +57,9 @@ define(['fullpage','excoloSlider'],
                                        $('.am3_2').show().addClass('fadeIn');
                                        setTimeout(function(){
                                            $('.am3_3').show().addClass('fadeIn');
-                                       },800);
-                                   },800);
-                               },800);
+                                       },300);
+                                   },300);
+                               },300);
                            },100);
                        }
                        if(index == 4){
@@ -70,15 +70,12 @@ define(['fullpage','excoloSlider'],
                $(document).on('click', '#gonext', function(){
                    $.fn.fullpage.moveSectionDown();
                });
-               $('.nav_a').each(function(){
-                   $(this).click(function(){
-                           $(this).next('.nav_option').toggle();
-                   })
-               })
            },
             loadImgSlider:function(){
                 $(function(){
-                    $("#slider_1").excoloSlider();
+                    $("#slider_1").excoloSlider({
+                        autoPlay:false
+                    });
                 })
             },
             loadMenu:function(){
@@ -87,15 +84,41 @@ define(['fullpage','excoloSlider'],
                     $(this).addClass('menu__item--current').siblings().removeClass('menu__item--current');
                     $('#slider_'+li).show().siblings('div').hide();
                     if($('#slider_'+li).attr('data-load') != '1'){
-                        $("#slider_"+li).excoloSlider();
+                        $("#slider_"+li).excoloSlider({autoPlay:false});
                         $("#slider_"+li).attr('data-load','1');
                     }
 
                 })
-
+            },
+            anchor:function(){
+                $(function(){
+                    var tar = getUrlParam('tar');
+                    switch(tar){
+                        case 'hj':
+                                $('html,body').animate({ scrollTop: $('#Ceres').offset().top}, 'slow');
+                                $('.item1>a').trigger('click');
+                            break;
+                        case 'ss':
+                                $('html,body').animate({ scrollTop: $('#Ceres').offset().top}, 'slow');
+                                $('.item2>a').trigger('click');
+                            break;
+                        case 'fw':
+                                $('html,body').animate({ scrollTop: $('#Ceres').offset().top}, 'slow');
+                                $('.item3>a').trigger('click');
+                            break;
+                    }
+                });
+            },
+            headerMenu:function(){
+                $('.nav_a').each(function(){
+                    $(this).click(function(){
+                        $(this).next('.nav_option').toggle();
+                    })
+                })
             }
        }
 });
+
 
 
 
