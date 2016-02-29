@@ -32,3 +32,44 @@ function getNewsStatus($status) {
         default : return    false;  break;
     }
 }
+
+/**
+ * 获取图片类名
+ */
+function getImagesTypeName($news_type_id) {
+    switch ($news_type_id){
+        case 1  : return    '今日早餐'; break;
+        case 2  : return    '今日午餐'; break;
+        case 3  : return    '今日晚餐'; break;
+        case 4  : return    '宝妈动态'; break;
+        default : return    false;  break;
+    }
+}
+
+/**
+ * 获取图片状态
+ */
+function getImagesStatus($status) {
+    switch ($status){
+        case 1  : return    '正常'; break;
+        case 0  : return    '删除'; break;
+        default : return    false;  break;
+    }
+}
+
+/**
+ * @param $length 长度(大于6)
+ * @return null|string 返回null或者长度$length字符串
+ */
+function getRandChar($length){
+    $str = null;
+    $strPol = "abcdefghijkmnpqrstuvwxyz123456789";
+    $max = strlen($strPol)-1;
+    $t = substr(time(),-6);
+    $length = $length - 6;
+    for($i=0;$i<$length;$i++){
+        $str.=$strPol[rand(0,$max)];//rand($min,$max)生成介于min和max两个数之间的一个随机整数
+    }
+    $str = $t.$str;
+    return $str;
+}

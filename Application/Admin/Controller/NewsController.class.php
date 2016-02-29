@@ -39,7 +39,6 @@ class NewsController extends BaseController
                 if (isset($id) && !empty($id)) { // 编辑
                     $news_icon_url = '.'.I('news_icon_url');//新文件路径
                     $old_icon_url = '.'.I('old_icon_url');//旧文件路径
-                    unset($_POST['old_icon_url']);//删除无用数组元素
                     //文件更改判断.删除旧文件
                     if($news_icon_url != $old_icon_url && file_exists($old_icon_url)) {
                         unlink($old_icon_url);
@@ -55,7 +54,6 @@ class NewsController extends BaseController
                 } else { // 添加
                     $data['created_at'] = time();
                     $data['updated_at'] = time();
-                    $data['id'] = htmlspecialchars($_POST['id']);
                     $data['title'] = htmlspecialchars($_POST['title']);
                     $data['news_icon_url'] = htmlspecialchars($_POST['news_icon_url']);
                     $data['news_type_id'] = htmlspecialchars($_POST['news_type_id']);
