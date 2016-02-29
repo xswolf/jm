@@ -64,7 +64,7 @@ class FileController extends BaseController
             //返回绝对路径
             $fileurl = $upload->rootPath.$info['images']['savepath'].$info['images']['savename'];
             $imgInfo = getimagesize($fileurl);//获取图片信息
-            $width = 231;//宽度
+            $width = 225;//宽度
             $rath = $width/$imgInfo[0];//按照宽度计算比例
             $height = $rath*$imgInfo[1];//等比例计算高度
             $url = $upload->rootPath.$info['images']['savepath'].getRandChar(13).'.'.$info['images']['ext'];
