@@ -18,7 +18,6 @@
     .v1 .txt_box{ left: 2%;  padding: 0;  top: 23%;  width: 36%; }
     .header_menu{ width: 1024px;}
     .header_menu .header_nav li .nav_a{ padding: 0 15px;}
-    .header_menu .header_nav{ margin-left: 85px;}
 
     .contact_content .main_content{ width: 100%;}
 
@@ -31,7 +30,6 @@
     .v1 .txt_box{height: 259px;  left: 3%;  padding: 0;  top: 125px;  width: 405px;}
     .header_menu{ width: 768px;}
     .header_menu .header_nav li .nav_a{ padding: 0 10px; font-size: 14px}
-    .header_menu .header_nav{ margin-left: 24px;}
     .header_menu .header_logo{ display: none;}
 
     /* 第二屏 */

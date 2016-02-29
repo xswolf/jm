@@ -10,7 +10,9 @@ require.config({
         fullpage: 'plugin/jquery/jquery.fullpage.min',
         excoloSlider: 'plugin/jquery/jquery.excoloSlider',
         adapt: 'plugin/jquery/adapt.min',
-        lightbox: 'plugin/jquery/lightbox-plus-jquery.min'
+        lightbox: 'plugin/jquery/lightbox-plus-jquery.min',
+        masonry: 'plugin/jquery/masonry.pkgd',
+        imagesloaded: 'plugin/jquery/imagesloaded.pkgd.min'
     }
 });
 

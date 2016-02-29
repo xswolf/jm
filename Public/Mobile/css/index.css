@@ -184,3 +184,34 @@
 }
 
 /* ================================Superiority/================================ */
+
+/* ================================Benefit================================ */
+.con_box{
+    padding: 10px 20px 0 20px;
+}
+.con_box .title{
+    background: url(/Public/Mobile/images/mb_sprite.png) no-repeat;
+    width: 108px;
+    height: 29px;
+    display: block;
+}
+.con_box span.t1{
+    background-position: left top;
+}
+.con_box dl{
+    float: left;
+}
+.con_box dl dt{
+
+}
+.con_box dl dt img{
+    vertical-align: top;
+}
+.con_box dl dd h2{
+
+}
+.con_box dl dd p{
+
+}
+
+/* ================================Benefit/================================ */

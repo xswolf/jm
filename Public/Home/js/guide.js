@@ -1,4 +1,4 @@
-define(['lightbox'],
+define(
 function () {
     return {
         init:function(){
@@ -6,6 +6,18 @@ function () {
                 $(this).addClass('on').siblings().removeClass('on');
             })*/
 
+        },
+        loadMasonry:function(){
+            $(function(){
+                var $container = $('#masonry_box');
+                $container.imagesLoaded( function(){
+                    $container.masonry({
+                        itemSelector : '.masonry_item',
+                        gutterWidth : 20,
+                        isAnimated: true
+                    });
+                });
+            });
         }
     }
 });

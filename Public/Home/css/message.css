@@ -1,0 +1,31 @@
+@charset "utf-8";
+.mes_main{
+    width: 100%;
+}
+.mes_t_img{
+   max-width: 100%;
+   vertical-align: middle;
+   margin-top: 100px;
+}
+.box{
+    margin-top: 20px;
+}
+.b_t{
+    width: 100%;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e6dbcc;
+}
+.b_t .t_i{
+    display: block;
+    background: url(/Public/Home/images/mes_t_01.png) no-repeat;
+    width: 183px;
+    height: 32px;
+}
+.b_t .t_t{
+    line-height: 32px;
+    color: #996c33;
+    font-family: "微软雅黑", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.b_con{
+    max-width: 1000px;
+}
