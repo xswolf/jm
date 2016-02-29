@@ -1,0 +1,54 @@
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">图片列表</h3>
+
+                </div><!-- /.box-header -->
+                <div class="alert alert-success" role="alert" style="display: none">...</div>
+                <div class="alert alert-danger" role="alert" style="display: none">...</div>
+                <div class="text-right">
+                    <a href="{:U('add')}" class="btn btn-danger margin">添加</a>
+                </div>
+                <div class="box-body">
+                    <table class="table dataTabes table-bordered table-striped">
+                        <thead>
+                        <tr>
+                            <th class="text-center">id</th>
+                            <th class="text-center">分类</th>
+                            <th class="text-center">描述</th>
+                            <th class="text-center">状态</th>
+                            <th class="text-center">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <volist name="lists" id="vo">
+                            <tr>
+                                <td class="text-center">{$vo.id}</td>
+                                <td class="text-center">{$vo.type_id|getImagesTypeName}</td>
+                                <td class="text-center">{$vo.name}</td>
+                                <td class="text-center">{$vo.status|getImagesStatus}</td>
+                                <td class="text-center">
+                                    <a href="{:U('Images/save','id='.$vo['id'])}"><button type="button" class="btn btn-primary">编辑</button></a>
+                                    <button type="button" data-url="{:U('del','id='.$vo['id'].'&table=images')}" class="btn btn-danger btn_del">删除</button>
+                                </td>
+                            </tr>
+
+                        </volist>
+
+                        </tbody>
+                        <tfoot>
+
+                        </tfoot>
+                    </table>
+                </div><!-- /.box-body -->
+            </div><!-- /.box -->
+        </div><!-- /.col -->
+    </div><!-- /.row -->
+</section><!-- /.content -->
+
+
+
+
+

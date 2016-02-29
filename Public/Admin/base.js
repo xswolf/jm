@@ -17,7 +17,7 @@ $(".btn_del").click(function () {
 // 点击“取消” e: false
     Modal.confirm(
         {
-            msg: "是否删除角色？"
+            msg: "是否删除？"
         })
         .on(function (e) {
             if (e) {
@@ -52,11 +52,18 @@ $("#file-4").fileinput({
     ]
 });
 $('#file-4').on('fileuploaded', function(event, file, previewId, index, reader) {
-    $('#file-4-value').attr({value:file.response.imgurl});
+    if(file.response.status) {
+        layer.msg(file.response.info);
+        $('#file-4-value').attr({value:file.response.imgurl});
+        $('#file-4-fileurl').attr({value:file.response.fileurl});
+    } else {
+        layer.msg(file.response.info);
+    }
+
 });
 
 //文章提交验证
-$('.btn-submit').click(function() {
+$('.news-submit').click(function() {
     var form = $(document.savenews);
     var name = $('input[name="title"]',form);
     var news_icon_url = $('input[name="news_icon_url"]',form);
@@ -72,6 +79,25 @@ $('.btn-submit').click(function() {
     }
     if(content == '') {
         layer.msg('内容不能为空');
+        return false;
+    }
+
+    form.submit();
+});
+
+//图片提交验证
+$('.images-submit').click(function() {
+    var form = $(document.saveImages);
+    var name = $('input[name="name"]',form);
+    var img = $('input[name="img"]',form);
+    var fileurl = $('input[name="fileurl"]',form);
+
+    if($.trim(name.val()) == '') {
+        layer.msg('标题不能为空');
+        return false;
+    }
+    if($.trim(img.val()) == '') {
+        layer.msg('请上传图片');
         return false;
     }
 
