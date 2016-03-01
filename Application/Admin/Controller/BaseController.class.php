@@ -19,6 +19,7 @@ class BaseController extends \Think\Controller
 
     public function _initialize()
     {
+        $this->assign('actUrl',CONTROLLER_NAME);
         if (!$this->isLogin()) {
             redirect(U('User/login'));
         }

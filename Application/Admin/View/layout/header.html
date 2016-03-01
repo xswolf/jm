@@ -6,6 +6,8 @@
     <title>嘉美月子</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- admin.css -->
+    <link rel="stylesheet" href="/Public/Admin/admin.css">
     <!-- Bootstrap 3.3.5 -->
     <link rel="stylesheet" href="/Public/Admin/bootstrap/css/bootstrap.min.css">
     <!-- Font Awesome -->
@@ -90,25 +92,21 @@
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu">
                 <li class="header">主体结构</li>
-                <li class="active ">
-                    <a href="#">
+                <li class="{$actUrl == 'Index' ? 'active' : ''}">
+                    <a href="{:U('Index/index')}">
                         <i class="fa fa-dashboard"></i> <span>首页</span> <i class="fa  pull-right"></i>
                     </a>
-
                 </li>
-
-                <li class=" ">
+                <li class="{$actUrl == 'News' ? 'active' : ''}">
                     <a href="{:U('News/lists')}">
                         <i class="fa fa-book"></i> <span>文章管理</span> <i class="fa  pull-right"></i>
                     </a>
                 </li>
-
-                <li class=" ">
+                <li class="{$actUrl == 'Images' ? 'active' : ''}">
                     <a href="{:U('Images/lists')}">
                         <i class="fa fa-book"></i> <span>图片管理</span> <i class="fa  pull-right"></i>
                     </a>
                 </li>
-
             </ul>
         </section>
         <!-- /.sidebar -->
