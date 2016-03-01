@@ -20,7 +20,7 @@ class NewsController extends BaseController
      */
     public function lists()
     {
-        $lists = News::instance()->lists('news' , '' , 10000);
+        $lists = News::instance()->lists('news' ,'status=1', '' , '');
 
         $this->assign('lists', $lists);
         $this->display();
@@ -46,6 +46,7 @@ class NewsController extends BaseController
                     $data['updated_at'] = time();
                     $data['id'] = htmlspecialchars($_POST['id']);
                     $data['title'] = htmlspecialchars($_POST['title']);
+                    $data['description'] = htmlspecialchars($_POST['description']);
                     $data['news_icon_url'] = htmlspecialchars($_POST['news_icon_url']);
                     $data['news_type_id'] = htmlspecialchars($_POST['news_type_id']);
                     $data['content'] = htmlspecialchars($_POST['content']);
@@ -55,6 +56,7 @@ class NewsController extends BaseController
                     $data['created_at'] = time();
                     $data['updated_at'] = time();
                     $data['title'] = htmlspecialchars($_POST['title']);
+                    $data['description'] = htmlspecialchars($_POST['description']);
                     $data['news_icon_url'] = htmlspecialchars($_POST['news_icon_url']);
                     $data['news_type_id'] = htmlspecialchars($_POST['news_type_id']);
                     $data['content'] = htmlspecialchars($_POST['content']);

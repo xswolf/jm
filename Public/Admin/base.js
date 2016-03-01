@@ -66,6 +66,7 @@ $('#file-4').on('fileuploaded', function(event, file, previewId, index, reader) 
 $('.news-submit').click(function() {
     var form = $(document.savenews);
     var name = $('input[name="title"]',form);
+    var description = $('input[name="description"]',form);
     var news_icon_url = $('input[name="news_icon_url"]',form);
     var content=CKEDITOR.instances.content.getData(); //取得纯文本
 
@@ -73,8 +74,12 @@ $('.news-submit').click(function() {
         layer.msg('标题不能为空');
         return false;
     }
+    if($.trim(description.val()) == '') {
+        layer.msg('描述不能为空');
+        return false;
+    }
     if($.trim(news_icon_url.val()) == '') {
-        layer.msg('图标不能为空');
+        layer.msg('请上传图片');
         return false;
     }
     if(content == '') {

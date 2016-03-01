@@ -20,7 +20,7 @@ class ImagesController extends BaseController
      */
     public function lists()
     {
-        $lists = Images::instance()->lists('images' , '' , 10000);
+        $lists = Images::instance()->lists('images' ,'status=1', '' , 10000);
 
         $this->assign('lists', $lists);
         $this->display();

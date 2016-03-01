@@ -59,6 +59,7 @@ function getImagesStatus($status) {
 }
 
 /**
+ * 获取随机字符串(取时间戳最后6位加随机字符串$length-1位)
  * @param $length 长度(大于6)
  * @return null|string 返回null或者长度$length字符串
  */

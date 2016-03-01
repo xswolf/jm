@@ -14,9 +14,16 @@ class Base
 
     static $instance = null;
 
-    public function lists($table , $offset = "" , $length=10){
-        $m = M($table)->where('status=1');
-        if ($offset != ''){
+    /**
+     * @param $table 表名
+     * @param string $where 查询条件
+     * @param int $offset 起始位置（传""，查询全部）
+     * @param int $length 查询条数
+     * @return mixed
+     */
+    public function lists($table, $where="", $offset = 0 , $length=10){
+        $m = M($table)->where($where);
+        if ($offset !== ""){
             $m->limit($offset , $length);
         }
         return $m->select();

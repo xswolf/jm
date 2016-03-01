@@ -20,37 +20,15 @@
                 <span class="r_t_font">当前位置：医院医生</span>
             </div>
             <div class="r_content clearfix">
-                <dl>
-                    <dt><a href="/Home/Guide/details"><img src="/Public/Home/images/gui_con_bot_02.jpg"></a></dt>
-                    <dd>
-                        <h2><a class="dd_t" href="/Home/Guide/details">长老教会医院</a></h2>
-                        <p class="dp">发神经能够收到回复你告诉对方敢死队风格斯蒂芬公司豆腐诉对方敢死队风格斯蒂芬公司豆腐诉对方敢死队风豆腐干斯蒂芬</p>
-                    </dd>
-                </dl>
-                <dl>
-                    <dt><a href="/Home/Guide/details"><img src="/Public/Home/images/gui_con_bot_02.jpg"></a></dt>
-                    <dd>
-                        <h2><a class="dd_t" href="/Home/Guide/details">惠提尔医院</a></h2>
-                        <p class="dp">发神经能够收到回复你告诉对方敢死队风格斯蒂芬公司豆腐诉对方敢死队风格斯蒂芬公司豆腐诉对方敢死队风豆腐干斯蒂芬</p>
-                    </dd>
-                </dl>
-                <dl>
-                    <dt><a href="/Home/Guide/details"><img src="/Public/Home/images/gui_con_bot_02.jpg"></a></dt>
-                    <dd>
-                        <h2><a class="dd_t" href="/Home/Guide/details">嘉惠儿医院</a></h2>
-                        <p class="dp">发神经能够收到回复你告诉对方敢死队风格斯蒂芬公司豆腐诉对方敢死队风格斯蒂芬公司豆腐诉对方敢死队风豆腐干斯蒂芬</p>
-                    </dd>
-                </dl>
-                <dl>
-                    <dt><a href="/Home/Guide/details"><img src="/Public/Home/images/gui_con_bot_02.jpg"></a></dt>
-                    <dd>
-                        <h2><a class="dd_t" href="/Home/Guide/details">园林医院</a></h2>
-                        <p class="dp">发神经能够收到回复你告诉对方敢死队风格斯蒂芬公司豆腐诉对方敢死队风格斯蒂芬公司豆腐诉对方敢死队风豆腐干斯蒂芬</p>
-                    </dd>
-                </dl>
-
-
-
+                <volist name="lists" id="vo" >
+                    <dl>
+                        <dt><a href="/Home/Guide/details?id={$vo.id}"><img src="{$vo.news_icon_url}"></a></dt>
+                        <dd>
+                            <h2><a class="dd_t" href="/Home/Guide/details?id={$vo.id}">{$vo.title}</a></h2>
+                            <p class="dp">{$vo.description}</p>
+                        </dd>
+                    </dl>
+                </volist>
             </div>
         </div>
         <div class="gui_bot clearfix">
