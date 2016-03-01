@@ -16,7 +16,7 @@ class GuideController extends BaseController {
     }
 
     public function doctor(){
-        $lists = News::instance()->lists('news',array('status'=>1,'news_type_id'=>8),0,4);
+        $lists = News::instance()->lists('news',array('status'=>1,'news_type_id'=>8),'','');
         $this->assign('lists', $lists);
         $this->display();
     }
