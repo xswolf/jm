@@ -18,6 +18,7 @@ function getNewsTypeName($news_type_id) {
         case 5  : return    '赴美流程'; break;
         case 6  : return    '赴美攻略'; break;
         case 7  : return    '赴美益处'; break;
+        case 8  : return    '医院医生'; break;
         default : return    false;  break;
     }
 }
