@@ -16,7 +16,7 @@ return array(
     'COOKIE_PREFIX'  => 'onethink_home_', // Cookie前缀 避免冲突
 
     /* 调试配置 */
-    'SHOW_PAGE_TRACE' => false,
+    'SHOW_PAGE_TRACE' => true,
     'DB_FIELDS_CACHE' => true,
 
     /* 用户相关设置 */

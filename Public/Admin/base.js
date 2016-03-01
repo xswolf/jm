@@ -31,7 +31,7 @@ $(".btn_del").click(function () {
 $(function () {
     // 消息提示
     var message_cookie = $.cookie('message');
-    message_cookie = JSON.parse(message_cookie);
+    if (message_cookie != null && message_cookie !== undefined)    message_cookie = JSON.parse(message_cookie);
     if (message_cookie != '' && message_cookie != undefined && message_cookie != 'null') {
         var _class = message_cookie.status == 1 ? 'alert-success' : 'alert-danger';
         $("." + _class).text(message_cookie.message).show();
@@ -68,7 +68,7 @@ $('.news-submit').click(function() {
     var name = $('input[name="title"]',form);
     var description = $('input[name="description"]',form);
     var news_icon_url = $('input[name="news_icon_url"]',form);
-    var content=CKEDITOR.instances.content.getData(); //取得纯文本
+    var content=UE.getEditor('content').getContent(); //取得纯文本
 
     if($.trim(name.val()) == '') {
         layer.msg('标题不能为空');
