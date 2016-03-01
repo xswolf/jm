@@ -65,6 +65,7 @@
                     ue.ready(function(){
                         <?php
                             $cont = $bean['content'];
+                            $cont = str_replace("\n", "", $cont);
                             $cont = str_replace("\r", "", $cont);
                             $cont = html_entity_decode($cont);
                         ?>
