@@ -1,9 +1,8 @@
 <link href="/Public/Home/css/message.css" rel="stylesheet" />
 <script>
-    require(['jquery','plugin/jquery/lightbox-plus-jquery.min','plugin/jquery/imagesloaded.pkgd.min','plugin/jquery/masonry.pkgd.min','guide'],
-            function (jquery,lightbox,imagesloaded,masonry,guide) {
-                guide.loadMasonry();
-            });
+    require(['guide'],function(guide){
+        guide.loadMasonry();
+    })
 </script>
 <div class="mes_main">
     <img class="mes_t_img" src="/Public/Home/images/mes_pic_01.jpg" />

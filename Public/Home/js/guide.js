@@ -1,4 +1,4 @@
-define(
+define(['jquery','lightbox','masonry','imagesloaded'],
 function () {
     return {
         init:function(){
