@@ -38,20 +38,26 @@
                </div>
                <div class="d_c_pageBtn fn-right">
                    <ul>
-                       <li><a href="">返回</a></li>
-                       <li><a href="">上一篇</a></li>
-                       <li><a href="">下一篇</a></li>
+                       <li><a href="/Home/Guide/doctor">返回</a></li>
+                       <if condition="$prevId">
+                           <li><a href="/Home/Guide/details?id={$prevId}">上一篇</a></li>
+                       </if>
+                       <if condition="$nextId">
+                            <li><a href="/Home/Guide/details?id={$nextId}">下一篇</a></li>
+                       </if>
                    </ul>
                </div>
            </div>
             <div class="d_c_c">
                 <div class="d_c_c_t">
-                    <h2 class="title fwb">长老教会医院</h2>
+                    <h2 class="title fwb">{$newsInfo.title}</h2>
                     <p class="d_c_f clearfix">
-                        <span class="f_en fn-left fwb">Presbyterian Intercommunity Hospital</span>
-                        <span class="f_author fn-right">发布者：嘉美月子中心</span>
+                        <span class="f_en fn-left fwb"></span>
+                        <span class="f_author fn-right">发布者：{$newsInfo['author']?$newsInfo['author']:'嘉美月子中心'}</span>
+
                     </p>
                 </div>
+                {$newsInfo.content|html_entity_decode}
             </div>
         </div>
     </div>
