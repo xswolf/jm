@@ -66,12 +66,17 @@ $('#file-4').on('fileuploaded', function(event, file, previewId, index, reader) 
 $('.news-submit').click(function() {
     var form = $(document.savenews);
     var name = $('input[name="title"]',form);
+    var author = $('input[name="author"]',form);
     var description = $('input[name="description"]',form);
     var news_icon_url = $('input[name="news_icon_url"]',form);
     var content=UE.getEditor('content').getContent(); //取得纯文本
 
     if($.trim(name.val()) == '') {
         layer.msg('标题不能为空');
+        return false;
+    }
+    if($.trim(author.val()) == '') {
+        layer.msg('作者不能为空');
         return false;
     }
     if($.trim(description.val()) == '') {

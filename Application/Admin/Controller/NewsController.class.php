@@ -46,6 +46,7 @@ class NewsController extends BaseController
                     $data['updated_at'] = time();
                     $data['id'] = htmlspecialchars($_POST['id']);
                     $data['title'] = htmlspecialchars($_POST['title']);
+                    $data['author'] = htmlspecialchars($_POST['author']);
                     $data['description'] = htmlspecialchars($_POST['description']);
                     $data['news_icon_url'] = htmlspecialchars($_POST['news_icon_url']);
                     $data['news_type_id'] = htmlspecialchars($_POST['news_type_id']);
@@ -56,6 +57,7 @@ class NewsController extends BaseController
                     $data['created_at'] = time();
                     $data['updated_at'] = time();
                     $data['title'] = htmlspecialchars($_POST['title']);
+                    $data['author'] = htmlspecialchars($_POST['author']);
                     $data['description'] = htmlspecialchars($_POST['description']);
                     $data['news_icon_url'] = htmlspecialchars($_POST['news_icon_url']);
                     $data['news_type_id'] = htmlspecialchars($_POST['news_type_id']);
