@@ -301,6 +301,6 @@
 .d_c_c .d_c_c_t .d_c_f .f_author{
 
 }
-.d_c_c>p span{
+.d_c_c>p span,.d_c_c>p a{
     color: #996c33 !important;
 }
