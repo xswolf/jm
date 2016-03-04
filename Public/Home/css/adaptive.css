@@ -15,7 +15,7 @@
     .fullpage-wrapper .contact_content .main_content, .ft .ft_content{ width: 100%;}
     /* 第一屏 */
     img.one{ top: 6%;  width: 49%; }
-    .v1 .txt_box{ left: 2%;  padding: 0;  top: 23%;  width: 36%; }
+    .v1 .txt_box{ left: 2%;  padding: 0;  top: 23%;  }
     .header_menu{ width: 1024px;}
     .header_menu .header_nav li .nav_a{ padding: 0 15px;}
 
@@ -27,7 +27,7 @@
     .nav_option .o_a{ font-size: 12px;}
     /* 第一屏 */
     img.one{ top: 8%;  width: 40%; }
-    .v1 .txt_box{height: 259px;  left: 3%;  padding: 0;  top: 125px;  width: 405px;}
+    .v1 .txt_box{ left: 3%;  padding: 0;  top: 125px;  }
     .header_menu{ width: 768px;}
     .header_menu .header_nav li .nav_a{ padding: 0 10px; font-size: 14px}
     .header_menu .header_logo{ display: none;}
@@ -59,7 +59,7 @@
     .nav_option .o_a{ font-size: 12px;}
     /* 第一屏 */
     img.one{ bottom: 10%;  right: 0;  top: auto;  width: 53%;}
-    .v1 .txt_box{left: 2%;  top: 17%;  width: 57%;}
+    .v1 .txt_box{left: 2%;  top: 17%;  }
     .header_menu .header_logo{ display: none;}
     .header_menu .header_nav{ margin-left: 0;}
     .home_header{ height: 80px; line-height: 80px;}
@@ -100,7 +100,7 @@
     .nav_option .o_a{ font-size: 12px;}
     /* 第一屏 */
     img.one{bottom: 5%;  right: 0;  top: auto;  width: 65%;}
-    .v1 .txt_box{height: 34%;  left: 3%;  top: 14%;  }
+    .v1 .txt_box{  left: 3%;  top: 14%;  }
     .v1 .am_con{ margin: 10px 0;}
     .header_menu{ width: 100%;}
     .header_menu .header_logo{ display: none;}

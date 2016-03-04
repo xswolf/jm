@@ -29,7 +29,14 @@
         <div class="header_nav">
             <ul class="clearfix">
                 <li><a class="nav_a {$actUrl == 'Index' ? 'on' : ''}" href="/Home/Index">首页</a></li>
-                <li><a class="nav_a {$actUrl == 'Superiority' ? 'on' : ''}" href="/Home/Superiority">嘉美优势</a></li>
+                <li>
+                    <a class="nav_a <?php echo ($actUrl == 'Experience' || $actUrl == 'Superiority' ? 'on' : ''); ?>" href="javascript:;">嘉美优势</a>
+                    <div class="nav_option">
+                        <i class="o_x"></i>
+                        <a class="o_a {$actUrl == 'Superiority' ? 'on' : ''}" href="/Home/Superiority">嘉美优势</a>
+                        <a class="o_a {$actUrl == 'Experience' ? 'on' : ''}" href="/Home/Experience">一周试住</a>
+                    </div>
+                </li>
                 <!--<li>
                     <a class="nav_a <?php echo ($actUrl == 'Message' || $actUrl == 'Food' ? 'on' : ''); ?>" href="javascript:;">宝妈的一天</a>
                     <div class="nav_option">
@@ -52,7 +59,10 @@
         </div>
         <div class="header_tell">
             <i class="icon_tell"></i>
-            <span class="txt_tell">美国直拨电话： <span class="phone_tell">950-404-93054</span><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（拨打时间：7:30-15:30）</span>
+            <span class="txt_tell">美国直拨热线：（7:30-15:30）
+                <br />
+                <span class="phone_tell">950-404-93054</span>
+            </span>
         </div>
     </div>
 </header>

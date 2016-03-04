@@ -1,21 +1,30 @@
 @charset "utf-8";
-
+.sup_top_banner{
+    width: 100%;
+    background: url(/Public/Home/images/sup_pic_01_bg.jpg) no-repeat;
+    height: 910px;
+}
+.sup_top_banner img{
+    max-width: 100%;
+    width: 100%;
+}
 .home_header{
     width: 100%;
     height: 100px;
-    background: rgba(245,245,245,0.7);
+    background: rgba(254, 242, 245,0.7);
     filter:progid:DXImageTransform.Microsoft.gradient(startcolorstr=#f5f5f5,endcolorstr=#f5f5f5);  /* ie8 */
     position: fixed;
     top: 0;
     left: 0;
     z-index: 999;
     line-height: 100px;
+    font-family: "microsoft yahei";
 }
 .header_menu{
     width: 1200px; margin: 0 auto; height: 100%;
 }
 .header_menu .header_logo{
-    background: url(/Public/Common/images/156x52_logo.png) no-repeat center;
+    background: url(/Public/Common/images/156x59_logo.png) no-repeat center;
     width: 156px;
     height: 100px;
     float: left;
@@ -24,6 +33,7 @@
 
 .header_menu .header_nav{
     float: left;
+    margin-left: 100px;
 }
 .header_menu .header_nav ul{
 
@@ -36,17 +46,17 @@
     width: 100%;
     height: auto;
     position: absolute;
-    top: 100px;
-    border: 1px solid #cfcfcf;
+    border: 1px solid #d60579;
     z-index: 999;
-    background: #f2f3f4;
+    background:rgba(254, 242, 245, 0.7);
     display: none;
 }
 .nav_option .o_x{
-    background: url(/Public/Home/images/o_x.jpg) no-repeat center;
+    background: url(/Public/Home/images/o_x.png) no-repeat center;
     height: 10px;
     position: absolute;
     top: -10px;
+    left: 0;
     width: 100%;
 }
 .nav_option .o_a{
@@ -56,7 +66,17 @@
     line-height: 50px;
     text-align: center;
     margin: 0 10px;
-    border-bottom: 1px solid #cfcfcf;
+    border-bottom: 1px solid #d60579;
+}
+#shizhu{
+    display: block;
+    position: absolute;
+    background: url(/Public/Home/images/home_pic_01_t.png) no-repeat;
+    width: 232px;
+    height: 27px;
+    bottom: 5%;
+    right: 10%;
+
 }
 .nav_option .o_a:last-child{
     border-bottom: 0;
@@ -72,10 +92,9 @@
     font-size: 16px;
     text-decoration: none;
     padding: 0 30px;
-    font-weight: 700;
 }
 .header_menu .header_nav li .nav_a:hover{
-  color: #e4007f;
+    color: #e4007f;
 }
 .header_menu .header_nav li .nav_a:active{
     color: #e4007f;
@@ -122,27 +141,27 @@
 .header_tell{
     float: right;
 }
-.header_tell span{
-    color: #e4007f;
-}
+
 .icon_tell{ 
-    background: url(/Public/Home/images/home_icon_tell.png) no-repeat center;
-    width: 24px;
+    background: url(/Public/Home/images/home_icon_tel.png) no-repeat center;
+    width: 48px;
     height: 100px;
     display: inline-block;
     vertical-align: middle;
 }
 .txt_tell{
     display: inline-block;
-    margin-left: 10px;
+    margin-left: 5px;
     vertical-align: middle;
+    font-size: 12px;
+    color: #ffa895;
 }
 
 .phone_tell{
     font-weight: 700;
-    font-size: 16px;
+    font-size: 21px;
     font-family: "microsoft yahei";
-    font-style: oblique;
+    color: #fd8469;
 }
 .am_con{
     z-index: 10;
@@ -170,10 +189,11 @@
 
 }
 .v1 .txt_box{
-    height: 303px;
-    top: 212px;
-    width: 500px;
+    height: 362px;
+    bottom: 10%;
+    width: 687px;
     z-index: 10;
+    position: absolute;
 }
 
 .l55{

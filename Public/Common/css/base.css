@@ -116,6 +116,9 @@ a:hover{text-decoration:underline;}   /* 让链接在 hover 状态下显示下�
 .mt10{ margin-top: 10px;}
 .mt20{ margin-top: 20px;}
 .mt30{ margin-top: 30px;}
+.mt100{ margin-top: 100px;}
+
+.mb30{ margin-bottom: 30px;}
 .clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
 .tac{ text-align: center;}
 .m10{ margin: 10px;}
@@ -127,3 +130,5 @@ a:hover{text-decoration:underline;}   /* 让链接在 hover 状态下显示下�
 .w100{width: 100%;}
 .m0a{ margin: 0 auto;}
 .w1000{ width: 1000px; margin: 0 auto;}
+.w1200{ width: 1200px; margin: 0 auto;}
+.max100{ max-width: 100%;}

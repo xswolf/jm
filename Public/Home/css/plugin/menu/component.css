@@ -1255,7 +1255,7 @@
 }
 
 .menu--ceres .menu__item--current .menu__link {
-	color: #b1783e;
+	color: #dc4f45;
 }
 
 .menu--ceres .menu__item::before,
@@ -1264,7 +1264,7 @@
 	content: '';
 	position: absolute;
 	bottom: 0;
-	background: #b1783e;
+	background: #eba5a0;
 }
 
 .menu--ceres .menu__item::before,
