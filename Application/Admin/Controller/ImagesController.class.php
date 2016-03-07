@@ -51,6 +51,8 @@ class ImagesController extends BaseController
                     $data['updated_at'] = time();
                     $data['id'] = htmlspecialchars($_POST['id']);
                     $data['name'] = htmlspecialchars($_POST['name']);
+                    $data['content'] = htmlspecialchars($_POST['content']);
+                    $data['time'] = strtotime($_POST['time']);
                     $data['img'] = htmlspecialchars($_POST['img']);
                     $data['original_url'] = htmlspecialchars($_POST['original_url']);
                     $data['type_id'] = htmlspecialchars($_POST['type_id']);
@@ -60,6 +62,8 @@ class ImagesController extends BaseController
                     $data['created_at'] = time();
                     $data['updated_at'] = time();
                     $data['name'] = htmlspecialchars($_POST['name']);
+                    $data['content'] = htmlspecialchars($_POST['content']);
+                    $data['time'] = strtotime($_POST['time']);
                     $data['img'] = htmlspecialchars($_POST['img']);
                     $data['original_url'] = htmlspecialchars($_POST['fileurl']);
                     $data['type_id'] = htmlspecialchars($_POST['type_id']);

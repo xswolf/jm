@@ -5,6 +5,12 @@
     </div><!-- /.box-header -->
     <form class="form-horizontal" name="saveImages" enctype="multipart/form-data" method="post" action="{:U('Images/save')}">
         <div class="form-group">
+            <label for="name" class="col-sm-2 control-label">标题</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="name" name="name" placeholder="请输入图片标题">
+            </div>
+        </div>
+        <div class="form-group">
             <label for="type_id" class="col-sm-2 control-label">类型:</label>
             <div class="col-sm-8">
                 <select class="form-control" id="type_id" name="type_id">
@@ -16,9 +22,15 @@
             </div>
         </div>
         <div class="form-group">
-            <label for="name" class="col-sm-2 control-label">描述</label>
+            <label for="name" class="col-sm-2 control-label">日期</label>
             <div class="col-sm-8">
-                <input type="text" class="form-control" id="name" name="name" placeholder="请输入图片描述">
+                <input size="16" type="text" name="time" value="" readonly class="form_datetime">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="name" class="col-sm-2 control-label">内容</label>
+            <div class="col-sm-8">
+                <textarea class="form-control" name="content" placeholder="请输入内容"></textarea>
             </div>
         </div>
         <div class="form-group">
@@ -48,4 +60,25 @@
 
 
 </div>
-
+<!-- Bootstrap-DateTime Picker -->
+<link rel="stylesheet" href="/Public/Admin/plugins/datepicker/datepicker3.css">
+<script src="/Public/Admin/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+<!-- datepicker -->
+<script src="/Public/Admin/plugins/datepicker/bootstrap-datepicker.js"></script>
+<script src="/Public/Admin/plugins/datepicker/locales/bootstrap-datepicker.zh-CN.js"></script>
+<script type="text/javascript">
+    var timestamp = (new Date()).valueOf();
+    var date = new Date(timestamp);
+    var Y = date.getFullYear()+'-';
+    var M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '-';
+    var D = date.getDate() < 10 ? '0'+date.getDate() : date.getDate();
+    $('.form_datetime').val(Y+M+D);
+    $(".form_datetime").datepicker({
+        format: "yyyy-mm-dd",
+        todayBtn: "linked",
+        clearBtn: true,
+        language: "zh-CN",
+        keyboardNavigation: false,
+        todayHighlight: true
+    });
+</script>
