@@ -7,7 +7,6 @@
 <link href="/Public/Common/css/base.css" rel="stylesheet">
 <link href="/Public/Home/css/index.css" rel="stylesheet">
 <link href="/Public/Home/css/adaptive.css" rel="stylesheet">
-<link href="/Public/Home/css/plugin/jquery/jquery.fullpage.min.css" rel="stylesheet">
 <script src="/Public/Home/js/plugin/requirejs/require.js" data-main="/Public/Home/js/main.js"></script>
 <!--[if lt IE 9]>
 <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
@@ -16,9 +15,13 @@
 <link href="/Public/Common/css/ie.css" rel="stylesheet">
 <![endif]-->
 <script>
-    require(['jquery','index'],
-            function (jquery,index) {
-                index.headerMenu();
+    require(['jquery'],
+            function ($) {
+                $('.nav_a').each(function(){
+                    $(this).click(function(){
+                        $(this).next('.nav_option').toggle();
+                    })
+                })
             });
 </script>
 </head>
@@ -30,21 +33,22 @@
             <ul class="clearfix">
                 <li><a class="nav_a {$actUrl == 'Index' ? 'on' : ''}" href="/Home/Index">首页</a></li>
                 <li>
-                    <a class="nav_a <?php echo ($actUrl == 'Experience' || $actUrl == 'Superiority' ? 'on' : ''); ?>" href="javascript:;">嘉美优势</a>
+                    <a class="nav_a <?php echo ($actUrl == 'Experience' || $actUrl == 'Superiority' || $actUrl == 'Package' ? 'on' : ''); ?>" href="javascript:;">嘉美优势</a>
                     <div class="nav_option">
                         <i class="o_x"></i>
                         <a class="o_a {$actUrl == 'Superiority' ? 'on' : ''}" href="/Home/Superiority">嘉美优势</a>
                         <a class="o_a {$actUrl == 'Experience' ? 'on' : ''}" href="/Home/Experience">一周试住</a>
+                        <!--<a class="o_a {$actUrl == 'Package' ? 'on' : ''}" href="/Home/Package">套餐费用</a>-->
                     </div>
                 </li>
-                <!--<li>
+                <li>
                     <a class="nav_a <?php echo ($actUrl == 'Message' || $actUrl == 'Food' ? 'on' : ''); ?>" href="javascript:;">宝妈的一天</a>
                     <div class="nav_option">
                         <i class="o_x"></i>
                         <a class="o_a {$actUrl == 'Message' ? 'on' : ''}" href="/Home/Message">宝妈动态</a>
                         <a class="o_a {$actUrl == 'Food' ? 'on' : ''}" href="/Home/Food">今日膳食</a>
                     </div>
-                </li>-->
+                </li>
                 <li>
                     <a class="nav_a <?php echo ($actUrl == 'Benefit' || $actUrl == 'Guide' ? 'on' : ''); ?>" href="javascript:;">赴美生子优势</a>
                     <div class="nav_option">

@@ -1,8 +1,80 @@
 <link href="/Public/Home/css/message.css" rel="stylesheet" />
+<link href="/Public/Home/css/plugin/jquery/lightbox.min.css" rel="stylesheet" />
 <script>
-    require(['guide'],function(guide){
-        guide.loadMasonry();
-    })
+    requirejs( [
+                'jquery',
+                'masonry',
+                'bridget',
+                'lightbox'
+            ],
+                function( $, Masonry, jQueryBridget,lightbox) {
+                    jQueryBridget( 'masonry', Masonry, $ ,lightbox);
+                   var $msnry = $('#masonry_box').masonry({
+                        itemSelector: '.masonry_item',
+                        gutter: 10,
+                        resize:true
+                    });
+                    lightbox.option({
+                        'alwaysShowNavOnTouchDevices': true,
+                        'showImageNumberLabel': false
+                    });
+
+                    $(window).scroll(function(){
+                        if($(document).scrollTop() > $(document).height() - $(window).height() - 500){
+                            /*$.ajax({
+                                url: '/home/serah/ajaxSearch',
+                                type: 'get',
+                                data: {p: page},
+                                dataType: 'json',
+                                beforeSend: function () {
+                                    loading = true;
+                                    scbot.hide();
+                                    $('#page_loading').show();
+                                },
+                                success: function (result) {
+                                    if (!result) {
+                                        loading = false;
+                                        $('#page_null').show();
+                                        scbot.hide();
+                                        $('#page_loading').hide();
+                                        return false;
+                                    } else {
+                                        var html = "";
+                                        for (var i in result) {
+                                            html += "<div class='item' data-uid='" + result[i].id + "'><a target='_blank' href='/home/member/"+result[i].id+".html'><img src='" + result[i].path + "' /></a>";
+                                            html += "<p class='name'><a target='_blank' href='/home/member/"+result[i].id+".html'>" + proccesUserName(result[i].fullname,result[i].sex,result[i].birthday) + "</a></p>";
+                                            html += "<p class='info'>"+ proccesNull(result[i].addr) + " " + proccesBirthdayToAge(result[i].birthday)+"岁 " + result[i].height + "cm " + (result[i].marrage != 0 ? mar[result[i].marrage].title : "")   +" " + (result[i].education!= 0 ? edu[result[i].education].title : "") + "</p>";
+                                            html += "<a class='sayHi "+(result[i].ismessage == 2 ? 'doIt' : '')+"' href='javascript:;' data-sex='"+result[i].sex+"'>"+(result[i].ismessage == 2 ? '已打招呼' : '打招呼')+"</a>";
+                                            html += "</div>";
+                                        }
+                                        $(html).find('img').each(function (index) {
+                                            loadImage($(this).attr('src'));
+                                        });
+                                        var $newElems = $(html).css({opacity: 0}).appendTo($container);
+                                        $newElems.imagesLoaded(function () {
+                                            setTimeout(function(){
+                                                $newElems.animate({opacity: 1}, 800);
+                                                $container.masonry('appended', $newElems);
+                                            },800);
+                                            $('#page_loading').hide();
+                                        });
+                                        page++;
+                                        loading = false;
+                                    }
+                                },
+                                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                                    alert('错误：' + textStatus + "， 异常信息：" + errorThrown + "，请您刷新重试！");
+                                    loading = false;
+                                    scbot.hide();
+                                    $('#page_loading').hide();
+                                    return false;
+                                }
+                            })*/
+                            var $html = $('<div class="masonry_item"><a class="img_box example-image-link" href="/Public/Home/images/s/2.jpg" data-lightbox="example-set" data-title="今天去公园游玩四大你撒个i阿斯钢hi啊us合格i啊额噶圣诞阿萨德那时的感觉"><img class="example-image" src="/Public/Home/images/s/2.jpg"></a><h2 class="f_t f_size_14 lh28">公园游玩</h2><p class="f_c m10a lh20">今天去公园游玩四大你撒个i阿斯钢hi啊us合格i啊额噶圣诞阿萨德那时的感觉</p><p class="tar f_date">2016-10-20</p></div>');
+                            $msnry.append( $html ).masonry( 'appended', $html );
+                        }
+                    });
+    });
 </script>
 <div class="mes_main">
     <img class="mes_t_img" src="/Public/Home/images/mes_pic_01.jpg" />
@@ -13,9 +85,18 @@
             <span class="t_t fn-right">晒一晒宝妈的休闲日子</span>
         </div>
         <div class="b_con masonry_box" id="masonry_box">
-            <div class="masonry_item">
+            <div class="masonry_item"><a class="img_box example-image-link" href="/Public/Home/images/s/1.jpg" data-lightbox="example-set" data-title="今天去公园游玩四大你撒个i阿斯钢hi啊us合格i啊额噶圣诞阿萨德那时的感觉"><img class="example-image" src="/Public/Home/images/s/1.jpg"></a><h2 class="f_t f_size_14 lh28">公园游玩</h2><p class="f_c m10a lh20">今天去公园游玩四大你撒个i阿斯钢hi啊us合格i啊额噶圣诞阿萨德那时的感觉</p><p class="tar f_date">2016-10-20</p></div>
+            <div class="masonry_item"><a class="img_box example-image-link" href="/Public/Home/images/s/3.jpg" data-lightbox="example-set" data-title="今天去公园游玩四大你撒个i阿斯钢hi啊us合格i啊额噶圣诞阿萨德那时的感觉"><img class="example-image" src="/Public/Home/images/s/3.jpg"></a><h2 class="f_t f_size_14 lh28">公园游玩</h2><p class="f_c m10a lh20">今天去公园游玩四大你撒个i阿斯钢hi啊us合格i啊额噶圣诞阿萨德那时的感觉</p><p class="tar f_date">2016-10-20</p></div>
+            <div class="masonry_item"><a class="img_box example-image-link" href="/Public/Home/images/s/2.jpg" data-lightbox="example-set" data-title="今天去公园游玩四大你撒个i阿斯钢hi啊us合格i啊额噶圣诞阿萨德那时的感觉"><img class="example-image" src="/Public/Home/images/s/2.jpg"></a><h2 class="f_t f_size_14 lh28">公园游玩</h2><p class="f_c m10a lh20">今天去公园游玩四大你撒个i阿斯钢hi啊us合格i啊额噶圣诞阿萨德那时的感觉</p><p class="tar f_date">2016-10-20</p></div>
+            <div class="masonry_item"><a class="img_box example-image-link" href="/Public/Home/images/s/4.jpg" data-lightbox="example-set" data-title="今天去公园游玩四大你撒个i阿斯钢hi啊us合格i啊额噶圣诞阿萨德那时的感觉"><img class="example-image" src="/Public/Home/images/s/4.jpg"></a><h2 class="f_t f_size_14 lh28">公园游玩</h2><p class="f_c m10a lh20">今天去公园游玩四大你撒个i阿斯钢hi啊us合格i啊额噶圣诞阿萨德那时的感觉</p><p class="tar f_date">2016-10-20</p></div>
+            <div class="masonry_item"><a class="img_box example-image-link" href="/Public/Home/images/s/5.jpg" data-lightbox="example-set" data-title="今天去公园游玩四大你撒个i阿斯钢hi啊us合格i啊额噶圣诞阿萨德那时的感觉"><img class="example-image" src="/Public/Home/images/s/5.jpg"></a><h2 class="f_t f_size_14 lh28">公园游玩</h2><p class="f_c m10a lh20">今天去公园游玩四大你撒个i阿斯钢hi啊us合格i啊额噶圣诞阿萨德那时的感觉</p><p class="tar f_date">2016-10-20</p></div>
+            <div class="masonry_item"><a class="img_box example-image-link" href="/Public/Home/images/s/6.jpg" data-lightbox="example-set" data-title="今天去公园游玩四大你撒个i阿斯钢hi啊us合格i啊额噶圣诞阿萨德那时的感觉"><img class="example-image" src="/Public/Home/images/s/6.jpg"></a><h2 class="f_t f_size_14 lh28">公园游玩</h2><p class="f_c m10a lh20">今天去公园游玩四大你撒个i阿斯钢hi啊us合格i啊额噶圣诞阿萨德那时的感觉</p><p class="tar f_date">2016-10-20</p></div>
+            <div class="masonry_item"><a class="img_box example-image-link" href="/Public/Home/images/s/7.jpg" data-lightbox="example-set" data-title="今天去公园游玩四大你撒个i阿斯钢hi啊us合格i啊额噶圣诞阿萨德那时的感觉"><img class="example-image" src="/Public/Home/images/s/7.jpg"></a><h2 class="f_t f_size_14 lh28">公园游玩</h2><p class="f_c m10a lh20">今天去公园游玩四大你撒个i阿斯钢hi啊us合格i啊额噶圣诞阿萨德那时的感觉</p><p class="tar f_date">2016-10-20</p></div>
+            <div class="masonry_item"><a class="img_box example-image-link" href="/Public/Home/images/s/2.jpg" data-lightbox="example-set" data-title="今天去公园游玩四大你撒个i阿斯钢hi啊us合格i啊额噶圣诞阿萨德那时的感觉"><img class="example-image" src="/Public/Home/images/s/2.jpg"></a><h2 class="f_t f_size_14 lh28">公园游玩</h2><p class="f_c m10a lh20">今天去公园游玩四大你撒个i阿斯钢hi啊us合格i啊额噶圣诞阿萨德那时的感觉</p><p class="tar f_date">2016-10-20</p></div>
+            <div class="masonry_item"><a class="img_box example-image-link" href="/Public/Home/images/s/5.jpg" data-lightbox="example-set" data-title="今天去公园游玩四大你撒个i阿斯钢hi啊us合格i啊额噶圣诞阿萨德那时的感觉"><img class="example-image" src="/Public/Home/images/s/5.jpg"></a><h2 class="f_t f_size_14 lh28">公园游玩</h2><p class="f_c m10a lh20">今天去公园游玩四大你撒个i阿斯钢hi啊us合格i啊额噶圣诞阿萨德那时的感觉</p><p class="tar f_date">2016-10-20</p></div>
+            <div class="masonry_item"><a class="img_box example-image-link" href="/Public/Home/images/s/3.jpg" data-lightbox="example-set" data-title="今天去公园游玩四大你撒个i阿斯钢hi啊us合格i啊额噶圣诞阿萨德那时的感觉"><img class="example-image" src="/Public/Home/images/s/3.jpg"></a><h2 class="f_t f_size_14 lh28">公园游玩</h2><p class="f_c m10a lh20">今天去公园游玩四大你撒个i阿斯钢hi啊us合格i啊额噶圣诞阿萨德那时的感觉</p><p class="tar f_date">2016-10-20</p></div>
+            <div class="masonry_item"><a class="img_box example-image-link" href="/Public/Home/images/s/6.jpg" data-lightbox="example-set" data-title="今天去公园游玩四大你撒个i阿斯钢hi啊us合格i啊额噶圣诞阿萨德那时的感觉"><img class="example-image" src="/Public/Home/images/s/6.jpg"></a><h2 class="f_t f_size_14 lh28">公园游玩</h2><p class="f_c m10a lh20">今天去公园游玩四大你撒个i阿斯钢hi啊us合格i啊额噶圣诞阿萨德那时的感觉</p><p class="tar f_date">2016-10-20</p></div>
 
-            </div>
         </div>
     </div>
 </div>

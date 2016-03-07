@@ -108,13 +108,6 @@ define(['fullpage','excoloSlider'],
                             break;
                     }
                 });
-            },
-            headerMenu:function(){
-                $('.nav_a').each(function(){
-                    $(this).click(function(){
-                        $(this).next('.nav_option').toggle();
-                    })
-                })
             }
        }
 });

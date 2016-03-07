@@ -29,3 +29,40 @@
 .b_con{
     max-width: 1000px;
 }
+
+.masonry_box {
+    padding: 20px 0;
+}
+.masonry_item {
+    margin-bottom: 10px;
+    float: left;
+    width: 220px;
+    padding: 10px;
+    border: 1px solid #e6dbcd;
+}
+.masonry_item .img_box{
+    width: 100%;
+    overflow: hidden;
+    display: block;
+}
+.masonry_item img {
+    max-width: 100%
+    transition:All 0.4s ease-in-out;
+    -webkit-transition:All 0.4s ease-in-out;
+    -moz-transition:All 0.4s ease-in-out;
+    -o-transition:All 0.4s ease-in-out;
+}
+.masonry_item img:hover{
+    transform:scale(1.2);
+    -webkit-transform:scale(1.2);
+    -moz-transform:scale(1.2);
+    -o-transform:scale(1.2);
+    -ms-transform:scale(1.2);
+}
+
+.masonry_item:hover{
+    -webkit-box-shadow: 3px 3px 3px #ddd;
+    -moz-box-shadow: 3px 3px 3px #ddd;
+    box-shadow: 3px 3px 3px #ddd;
+    border: 1px solid #f19ec2;
+}

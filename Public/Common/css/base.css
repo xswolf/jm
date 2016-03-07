@@ -98,6 +98,9 @@ a:hover{text-decoration:underline;}   /* 让链接在 hover 状态下显示下�
 .f_pink  {color:#F03B85;}    /* 粉色 */
 .f_red  {color:#f00;}    /* 红色 */
 .f_def{ color: #e4007f;} /* 默认 */
+.f_t{ color: #e4007f;}
+.f_c{ color: #53504c;}
+.f_date{ color: #cfa972;}
 
 /* 文字大小  */
 .f_size_12 {font-size:12px;}
@@ -108,7 +111,9 @@ a:hover{text-decoration:underline;}   /* 让链接在 hover 状态下显示下�
 
 .f_wryh{ font-family: microsoft yahei, arial;}
 .pr{ position: relative;}
+.lh20{ line-height: 20px;}
 .lh24{ line-height: 24px;}
+.lh28{ line-height: 28px;}
 .lh48{ line-height: 48px;}
 .ml10{ margin-left: 10px;}
 .ml15{ margin-left: 15px;}
@@ -132,3 +137,4 @@ a:hover{text-decoration:underline;}   /* 让链接在 hover 状态下显示下�
 .w1000{ width: 1000px; margin: 0 auto;}
 .w1200{ width: 1200px; margin: 0 auto;}
 .max100{ max-width: 100%;}
+.tar{ text-align: right;}
