@@ -14,7 +14,6 @@ require.config({
         wookmark: 'plugin/jquery/wookmark',
         masonry: 'plugin/jquery/masonry.pkgd.min',
         bridget: 'plugin/jquery/jquery.bridget'
-
     }
 
 });

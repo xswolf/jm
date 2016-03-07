@@ -100,6 +100,7 @@ a:hover{text-decoration:underline;}   /* 让链接在 hover 状态下显示下�
 .f_def{ color: #e4007f;} /* 默认 */
 .f_t{ color: #e4007f;}
 .f_c{ color: #53504c;}
+.f_fd{ color:#996c33;}
 .f_date{ color: #cfa972;}
 
 /* 文字大小  */

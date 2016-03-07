@@ -1,1 +1,117 @@
 @charset "utf-8";
+.fd_main{
+    width: 100%;
+}
+.fd_t_img{
+    max-width: 100%;
+    vertical-align: middle;
+    margin-top: 100px;
+}
+.box{
+    margin-top: 20px;
+}
+.b_t{
+    width: 100%;
+    padding-bottom: 15px;
+}
+.b_t .t_i{
+    display: block;
+    background: url(/Public/Home/images/food_pic_t.png) no-repeat;
+    width: 183px;
+    height: 36px;
+}
+.b_t .t_t{
+    line-height: 32px;
+    color: #996c33;
+    font-family: "微软雅黑", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.fd_t2{
+
+}
+.fd_t2 .fd_date{
+
+}
+.fd_t2 .fd_date .date_t{
+    color: #996c33;
+    font-size: 14px;
+}
+.fd_t2 .fd_date .date_t strong{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.fd_t2 .fd_date .dayPage{
+    color: #996c33;
+    padding: 0 20px;
+}
+#prep{
+    border-right: 1px solid #996c33;
+    padding-right: 5px;
+}
+#today{
+    padding-left: 4px;
+}
+
+.fd_t2 .fd_type{
+    font-size: 14px;
+}
+.fd_t2 .fd_type a.on{
+    color: #e4007f;
+}
+
+.fd_t2 .fd_type a:hover{
+    text-decoration: none;
+    color: #e4007f;
+}
+.fd_t2 .fd_type a{
+    border-right: 1px solid #996c33;
+    color: #996c33;
+    padding:0 20px;
+}
+.fd_t2 .fd_type a:last-child{
+    border-right: 0;
+    padding-right: 0;
+}
+
+.fd_t2_line{
+    background: url(/Public/Home/images/food_pic_t2_line.png) no-repeat left top;
+    width: 100%;
+    height: 6px;
+    display: block;
+}
+
+.fd_con{
+    padding-top: 15px;
+}
+.fd_b{
+    width: 1010px;
+}
+.fd_con .item{
+    float: left;
+    margin-right:10px;
+    background: #fefbf8;
+    width: 220px;
+    border: 1px solid #dbbf9b;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+.fd_con .item a{
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+.fd_con .item img {
+    max-width: 100%
+    transition:All 0.4s ease-in-out;
+    -webkit-transition:All 0.4s ease-in-out;
+    -moz-transition:All 0.4s ease-in-out;
+    -o-transition:All 0.4s ease-in-out;
+}
+.fd_con .item img:hover{
+    transform:scale(1.2);
+    -webkit-transform:scale(1.2);
+    -moz-transform:scale(1.2);
+    -o-transform:scale(1.2);
+    -ms-transform:scale(1.2);
+}

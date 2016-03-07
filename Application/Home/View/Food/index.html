@@ -1,10 +1,47 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
+<link href="/Public/Home/css/food.css" rel="stylesheet" />
+<link href="/Public/Home/css/plugin/jquery/lightbox.min.css" rel="stylesheet" />
+<script>
+    requirejs( [
+                'jquery',
+                'lightbox'
+            ],
+            function( $, lightbox) {
+                lightbox.option({
+                    'alwaysShowNavOnTouchDevices': true,
+                    'showImageNumberLabel': false
+                });
+            });
+</script>
+<div class="fd_main">
+    <img class="fd_t_img" src="/Public/Home/images/mes_pic_01.jpg" />
+    <div class="w1000 box">
+        <div class="b_t clearfix">
+            <span class="t_i fn-left"></span>
+            <span class="t_t fn-right">嘉美专业厨师，会根据宝妈们的不同饮食习惯，做出不同口味的可口饭菜！</span>
+        </div>
 
-</body>
-</html>
+        <div class="fd_t2 clearfix">
+            <span class="fd_date fn-left lh24">
+                <span class="date_t"><strong>{$month}</strong>月<strong>{$day}</strong>日</span>
+                <a href="javascript:;" class="dayPage " id="prep">前一天</a>
+                <a href="javascript:;" class="dayPage " id="today">今天</a>
+            </span>
+            <span class="fd_type fn-right lh24">
+                <a class="on" href="javascript:;">早餐</a>
+                <a href="javascript:;">午餐</a>
+                <a href="javascript:;">晚餐</a>
+            </span>
+        </div>
+        <div class="fd_t2_line "></div>
+        <div class="fd_con w100 clearfix">
+            <div class="fd_b">
+                <div class="item"><a href="javascript:;" ><img src="/Public/Home/images/s/11.jpg"></a><h2 class="f_t f_size_14 lh28">麻辣香菇</h2><p class="f_fd lh20">我们今天吃了移到麻辣香菇，其中有位来自湖南的妈妈，吃得特别想，他说有自家乡的味道。我们今天吃了移到麻辣香菇，其中有位来自。</p></div>
+                <div class="item"><a href="javascript:;" ><img src="/Public/Home/images/s/11.jpg"></a><h2 class="f_t f_size_14 lh28">麻辣香菇</h2><p class="f_fd lh20">我们今天吃了移到麻辣香菇，其中有位来自湖南的妈妈，吃得特别想，他说有自家乡的味道。我们今天吃了移到麻辣香菇，其中有位来自。</p></div>
+                <div class="item"><a href="javascript:;" ><img src="/Public/Home/images/s/11.jpg"></a><h2 class="f_t f_size_14 lh28">麻辣香菇</h2><p class="f_fd lh20">我们今天吃了移到麻辣香菇，其中有位来自湖南的妈妈，吃得特别想，他说有自家乡的味道。我们今天吃了移到麻辣香菇，其中有位来自。</p></div>
+                <div class="item"><a href="javascript:;" ><img src="/Public/Home/images/s/11.jpg"></a><h2 class="f_t f_size_14 lh28">麻辣香菇</h2><p class="f_fd lh20">我们今天吃了移到麻辣香菇，其中有位来自湖南的妈妈，吃得特别想，他说有自家乡的味道。我们今天吃了移到麻辣香菇，其中有位来自。</p></div>
+                <div class="item"><a href="javascript:;" ><img src="/Public/Home/images/s/11.jpg"></a><h2 class="f_t f_size_14 lh28">麻辣香菇</h2><p class="f_fd lh20">我们今天吃了移到麻辣香菇，其中有位来自湖南的妈妈，吃得特别想，他说有自家乡的味道。我们今天吃了移到麻辣香菇，其中有位来自。</p></div>
+                <div class="item"><a href="javascript:;" ><img src="/Public/Home/images/s/11.jpg"></a><h2 class="f_t f_size_14 lh28">麻辣香菇</h2><p class="f_fd lh20">我们今天吃了移到麻辣香菇，其中有位来自湖南的妈妈，吃得特别想，他说有自家乡的味道。我们今天吃了移到麻辣香菇，其中有位来自。</p></div>
+            </div>
+        </div>
+    </div>
+</div>
