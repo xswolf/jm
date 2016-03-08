@@ -35,6 +35,7 @@
 .fd_t2 .fd_date .date_t{
     color: #996c33;
     font-size: 14px;
+    letter-spacing: 2px;
 }
 .fd_t2 .fd_date .date_t strong{
     font-size: 24px;
