@@ -304,3 +304,22 @@
 .d_c_c>p span,.d_c_c>p a{
     color: #996c33 !important;
 }
+
+
+/* Package */
+.pkg_r_t{
+    background: url(/Public/Home/images/pkg_index_t.png) no-repeat left top;
+    width: 100%;
+    height: 68px;
+    display: block;
+    margin-bottom: 10px;
+}
+.imgList{
+    width: 100%;
+}
+.index img,.big img,.vip img{
+    float: left;
+}
+.ord img{
+    float: right;
+}
