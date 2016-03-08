@@ -11,6 +11,39 @@
                     'showImageNumberLabel': false
                 });
             });
+    function timeclick(i) {
+        $.post("/Home/Food/index", { type: i },
+            function(data){
+                if(i==1 || i==0) {
+                    window.location.reload();
+                } else {
+                    var html = '';
+                    $.each(data,function(k,n) {
+                        html += '<div class="item"><a href="javascript:;" ><img src="';
+                        html += n.img;
+                        html += '"></a><h2 class="f_t f_size_14 lh28">';
+                        html += n.name;
+                        html += '</h2><p class="f_fd lh20">';
+                        html += n.content;
+                        html += '</p></div>';
+                    });
+                    if(i ==2) {
+                        $('#food2').toggleClass('on');
+                        $('#food3').removeClass();
+                        $('#food4').removeClass();
+                    } else if(i ==3) {
+                        $('#food2').removeClass();
+                        $('#food3').toggleClass('on');
+                        $('#food4').removeClass();
+                    } else if(i ==4) {
+                        $('#food2').removeClass();
+                        $('#food3').removeClass();
+                        $('#food4').toggleClass('on');
+                    }
+                    $('.fd_b').html(html);
+                }
+            },'json');
+    }
 </script>
 <div class="fd_main">
     <img class="fd_t_img" src="/Public/Home/images/mes_pic_01.jpg" />
@@ -23,24 +56,21 @@
         <div class="fd_t2 clearfix">
             <span class="fd_date fn-left lh24">
                 <span class="date_t"><strong>{$month}</strong>月<strong>{$day}</strong>日</span>
-                <a href="javascript:;" class="dayPage " id="prep">前一天</a>
-                <a href="javascript:;" class="dayPage " id="today">今天</a>
+                <a href="javascript:timeclick(0);" class="dayPage " id="prep">前一天</a>
+                <a href="javascript:timeclick(1);" class="dayPage " id="today">今天</a>
             </span>
             <span class="fd_type fn-right lh24">
-                <a class="on" href="javascript:;">早餐</a>
-                <a href="javascript:;">午餐</a>
-                <a href="javascript:;">晚餐</a>
+                <a class="on" href="javascript:timeclick(2);" id="food2">早餐</a>
+                <a href="javascript:timeclick(3);" id="food3">午餐</a>
+                <a href="javascript:timeclick(4);" id="food4">晚餐</a>
             </span>
         </div>
         <div class="fd_t2_line "></div>
         <div class="fd_con w100 clearfix">
             <div class="fd_b">
-                <div class="item"><a href="javascript:;" ><img src="/Public/Home/images/s/11.jpg"></a><h2 class="f_t f_size_14 lh28">麻辣香菇</h2><p class="f_fd lh20">我们今天吃了移到麻辣香菇，其中有位来自湖南的妈妈，吃得特别想，他说有自家乡的味道。我们今天吃了移到麻辣香菇，其中有位来自。</p></div>
-                <div class="item"><a href="javascript:;" ><img src="/Public/Home/images/s/11.jpg"></a><h2 class="f_t f_size_14 lh28">麻辣香菇</h2><p class="f_fd lh20">我们今天吃了移到麻辣香菇，其中有位来自湖南的妈妈，吃得特别想，他说有自家乡的味道。我们今天吃了移到麻辣香菇，其中有位来自。</p></div>
-                <div class="item"><a href="javascript:;" ><img src="/Public/Home/images/s/11.jpg"></a><h2 class="f_t f_size_14 lh28">麻辣香菇</h2><p class="f_fd lh20">我们今天吃了移到麻辣香菇，其中有位来自湖南的妈妈，吃得特别想，他说有自家乡的味道。我们今天吃了移到麻辣香菇，其中有位来自。</p></div>
-                <div class="item"><a href="javascript:;" ><img src="/Public/Home/images/s/11.jpg"></a><h2 class="f_t f_size_14 lh28">麻辣香菇</h2><p class="f_fd lh20">我们今天吃了移到麻辣香菇，其中有位来自湖南的妈妈，吃得特别想，他说有自家乡的味道。我们今天吃了移到麻辣香菇，其中有位来自。</p></div>
-                <div class="item"><a href="javascript:;" ><img src="/Public/Home/images/s/11.jpg"></a><h2 class="f_t f_size_14 lh28">麻辣香菇</h2><p class="f_fd lh20">我们今天吃了移到麻辣香菇，其中有位来自湖南的妈妈，吃得特别想，他说有自家乡的味道。我们今天吃了移到麻辣香菇，其中有位来自。</p></div>
-                <div class="item"><a href="javascript:;" ><img src="/Public/Home/images/s/11.jpg"></a><h2 class="f_t f_size_14 lh28">麻辣香菇</h2><p class="f_fd lh20">我们今天吃了移到麻辣香菇，其中有位来自湖南的妈妈，吃得特别想，他说有自家乡的味道。我们今天吃了移到麻辣香菇，其中有位来自。</p></div>
+                <volist name="list" id="vo">
+                    <div class="item"><a href="javascript:;" ><img src="{$vo.img}"></a><h2 class="f_t f_size_14 lh28">{$vo.name}</h2><p class="f_fd lh20">{$vo.content}</p></div>
+                </volist>
             </div>
         </div>
     </div>
