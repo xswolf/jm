@@ -8,9 +8,9 @@
 
 namespace Home\Model;
 
-class MessageModel extends Model{
+class ImagesModel extends BaseModel{
 
-    private $_table = 'images';
+    protected $_table = 'images';
 
     public function getList($ajax=false,$pageIndex=1,$pageSize=8,$where=['type_id'=>4,'status'=>1],$order='time desc'){
         $list = M($this->_table)->where($where)

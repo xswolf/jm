@@ -6,11 +6,11 @@
  * Time: 10:19
  */
 namespace Home\Model;
-use Think\Model as ThinkModel;
+use Think\Model;
 
-class Model extends ThinkModel{
+class BaseModel extends Model{
 
-    protected $_table = '';
+    protected $_table = 'images';
 
     /**
      * 保证每个类只有一个实例
