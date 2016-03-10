@@ -7,11 +7,11 @@ class MessageController extends BaseController {
 
     public function index(){
 
-//        if(IS_POST){
-            $list = ImagesModel::instance()->getList(0);
-            $this->assign('list',$list);
-//        }
-
-      $this->display();
+        if(IS_POST){
+            $this->ajaxReturn(ImagesModel::instance()->getList(I('page')));
+        }
+        $list = ImagesModel::instance()->getList(1);
+        $this->assign('list',$list);
+        $this->display();
     }
 }

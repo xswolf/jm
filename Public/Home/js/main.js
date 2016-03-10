@@ -7,6 +7,7 @@ require.config({
     paths: {
         jquery: 'jquery',
         extend: 'extend',
+        public: '../../Common/js/public',
         fullpage: 'plugin/jquery/jquery.fullpage.min',
         excoloSlider: 'plugin/jquery/jquery.excoloSlider',
         adapt: 'plugin/jquery/adapt.min',
