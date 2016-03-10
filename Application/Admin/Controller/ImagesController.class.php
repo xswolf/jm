@@ -83,4 +83,21 @@ class ImagesController extends BaseController
         }
     }
 
+    public function editIamgesTime() {
+        if ($_POST) {
+            $id = I('id');
+            $time = I('time');
+            if (!empty($id)) {
+                $data['time'] = strtotime($time);
+                foreach ($id as $vo) {
+                    $data['id'] = $vo;
+                    Images::instance()->edit($data,'images');
+                }
+            }
+
+            $this->_success('操作成功' , U('Images/lists'));
+            exit();
+        }
+    }
+
 }
