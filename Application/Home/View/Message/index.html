@@ -39,7 +39,7 @@
                                     } else {
                                         var html = "";
                                         for (var i in result) {
-                                            html += '<div class="masonry_item" data-id="'+result[i].id+'"><a class="img_box example-image-link" href="' + result[i].original_url;
+                                            html += '<div class="masonry_item"><a class="img_box example-image-link" href="' + result[i].original_url;
                                             html += '" data-lightbox="example-set" data-title="' + result[i].content;
                                             html += '"><img class="example-image" src="' + result[i].img;
                                             html += '"></a><h2 class="f_t f_size_14 lh28">' + result[i].name;
@@ -77,7 +77,7 @@
         </div>
         <div class="b_con masonry_box clearfix" id="masonry_box">
             <volist name="list" id="vo">
-                <div class="masonry_item" data-id="{$vo['id']}"><a class="img_box example-image-link" href="{$vo['original_url']}" data-lightbox="example-set" data-title="今天去公园游玩四大你撒个i阿斯钢hi啊us合格i啊额噶圣诞阿萨德那时的感觉"><img class="example-image" src="{$vo['img']}"></a><h2 class="f_t f_size_14 lh28">{$vo['name']}</h2><p class="f_c m10a lh20">{$vo['content']}</p><p class="tar f_date">{$vo['time']|date='Y-m-d',###}</p></div>
+                <div class="masonry_item"><a class="img_box example-image-link" href="{$vo['original_url']}" data-lightbox="example-set" data-title="{$vo['content']}"><img class="example-image" src="{$vo['img']}"></a><h2 class="f_t f_size_14 lh28">{$vo['name']}</h2><p class="f_c m10a lh20">{$vo['content']}</p><p class="tar f_date">{$vo['time']|date='Y-m-d',###}</p></div>
             </volist>
 
         </div>

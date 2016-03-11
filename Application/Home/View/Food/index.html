@@ -19,7 +19,8 @@
                 } else {
                     var html = '';
                     $.each(data,function(k,n) {
-                        html += '<div class="item"><a href="javascript:;" ><img src="';
+                        html += '<div class="item"><a class="example-image-link" data-lightbox="example-set" href="'+ n.img;
+                        html += '" ><img class="example-image" src="';
                         html += n.img;
                         html += '"></a><h2 class="f_t f_size_14 lh28">';
                         html += n.name;
@@ -69,7 +70,13 @@
         <div class="fd_con w100 clearfix">
             <div class="fd_b">
                 <volist name="list" id="vo">
-                    <div class="item"><a href="javascript:;" ><img src="{$vo.img}"></a><h2 class="f_t f_size_14 lh28">{$vo.name}</h2><p class="f_fd lh20">{$vo.content}</p></div>
+                    <div class="item">
+                        <a class="example-image-link" href="{$vo.img}" data-lightbox="example-set" >
+                            <img class="example-image" src="{$vo.img}">
+                        </a>
+                        <h2 class="f_t f_size_14 lh28">{$vo.name}</h2>
+                        <p class="f_fd lh20">{$vo.content}</p>
+                    </div>
                 </volist>
             </div>
         </div>

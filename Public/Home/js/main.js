@@ -14,7 +14,8 @@ require.config({
         lightbox: 'plugin/jquery/lightbox-plus-jquery.min',
         wookmark: 'plugin/jquery/wookmark',
         masonry: 'plugin/jquery/masonry.pkgd.min',
-        bridget: 'plugin/jquery/jquery.bridget'
+        bridget: 'plugin/jquery/jquery.bridget',
+        ad_gallery: 'plugin/jquery/jquery.ad-gallery'
     }
 
 });

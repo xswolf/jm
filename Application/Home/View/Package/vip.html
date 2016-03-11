@@ -1,5 +1,19 @@
 <link href="/Public/Home/css/experience.css" rel="stylesheet"/>
 <link href="/Public/Home/css/guide.css" rel="stylesheet" />
+<link href="/Public/Home/css/plugin/jquery/ad-gallery.css" rel="stylesheet" />
+<script>
+    requirejs( [
+        'jquery',
+        'ad_gallery'
+    ],function($){
+        $('.ad-gallery').adGallery({
+            cycle:true,
+            slideshow:{
+                enable:false
+            }
+        });
+    })
+</script>
 <div class="max100 w100">
     <div class="exp_bg1">
         <div class="w1200 max100">
@@ -14,12 +28,25 @@
 
         <div class="con_right clearfix">
             <div class="pkg_r_t"></div>
-            <div class="imgList vip clearfix">
-                <img class="" width="460" src="/Public/Home/images/pkg_vip_01.jpg">
-                <img class="" width="320" src="/Public/Home/images/pkg_vip_02.jpg" style="float: right">
-                <img class="mt10" width="320" src="/Public/Home/images/pkg_vip_04.jpg" style="float: right">
-                <img class="mt10" width="460" src="/Public/Home/images/pkg_vip_03.jpg">
-                <img class="mt10 ml10" width="320" src="/Public/Home/images/pkg_vip_05.jpg">
+            <article class="mt10 tac mb10">
+                <h1 class="f_def">豪华VIP套房</h1>
+                <p  class="f_def">大房是45-50平米, 小房是20-25平米, 含独立洗浴, 卫生间和衣帽间</p>
+            </article>
+            <div class="ad_box">
+                <div id="gallery" class="ad-gallery">
+                    <div class="ad-image-wrapper"></div>
+                    <div class="ad-nav">
+                        <div class="ad-thumbs">
+                            <ul class="ad-thumb-list">
+                                <li><a href="/Public/Home/images/pkg_vip_01.jpg"><img src="/Public/Home/images/pkg_vip_01.jpg" height="80" /></a></li>
+                                <li><a href="/Public/Home/images/pkg_vip_02.jpg"><img src="/Public/Home/images/pkg_vip_02.jpg" height="80" /></a></li>
+                                <li><a href="/Public/Home/images/pkg_vip_03.jpg"><img src="/Public/Home/images/pkg_vip_03.jpg" height="80" /></a></li>
+                                <li><a href="/Public/Home/images/pkg_vip_04.jpg"><img src="/Public/Home/images/pkg_vip_04.jpg" height="80" /></a></li>
+                                <li><a href="/Public/Home/images/pkg_vip_05.jpg"><img src="/Public/Home/images/pkg_vip_05.jpg" height="80" /></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

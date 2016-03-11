@@ -1,5 +1,19 @@
 <link href="/Public/Home/css/experience.css" rel="stylesheet"/>
 <link href="/Public/Home/css/guide.css" rel="stylesheet" />
+<link href="/Public/Home/css/plugin/jquery/ad-gallery.css" rel="stylesheet" />
+<script>
+    requirejs( [
+        'jquery',
+        'ad_gallery'
+    ],function($){
+        $('.ad-gallery').adGallery({
+            cycle:true,
+            slideshow:{
+                enable:false
+            }
+        });
+    })
+</script>
 <div class="max100 w100">
     <div class="exp_bg1">
         <div class="w1200 max100">
@@ -14,12 +28,21 @@
 
         <div class="con_right clearfix">
             <div class="pkg_r_t"></div>
-            <div class="imgList index clearfix">
-                <img class="" width="485" src="/Public/Home/images/pkg_index_01.jpg">
-                <img class="ml10" width="291" src="/Public/Home/images/pkg_index_04.jpg">
-                <img class="ml10 mt10" width="291" src="/Public/Home/images/pkg_index_03.jpg">
-                <img class="mt10" width="289" src="/Public/Home/images/pkg_index_02.jpg">
-                <img class="ml10 mt10" width="488" src="/Public/Home/images/pkg_index_05.jpg">
+            <div class="ad_box">
+                <div id="gallery" class="ad-gallery">
+                <div class="ad-image-wrapper"></div>
+                <div class="ad-nav">
+                    <div class="ad-thumbs">
+                        <ul class="ad-thumb-list">
+                            <li><a href="/Public/Home/images/pkg_index_01.jpg"><img src="/Public/Home/images/pkg_index_01.jpg" height="80" /></a></li>
+                            <li><a href="/Public/Home/images/pkg_index_02.jpg"><img src="/Public/Home/images/pkg_index_02.jpg" height="80" /></a></li>
+                            <li><a href="/Public/Home/images/pkg_index_03.jpg"><img src="/Public/Home/images/pkg_index_03.jpg" height="80" /></a></li>
+                            <li><a href="/Public/Home/images/pkg_index_04.jpg"><img src="/Public/Home/images/pkg_index_04.jpg" height="80" /></a></li>
+                            <li><a href="/Public/Home/images/pkg_index_05.jpg"><img src="/Public/Home/images/pkg_index_05.jpg" height="80" /></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             </div>
         </div>
     </div>
