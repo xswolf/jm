@@ -43,11 +43,11 @@ class FoodController extends BaseController {
                     $where = ['status'=>1,'time'=>$newtime,'type_id'=>3];
                     break;
             }
-            $list = ImagesModel::instance()->getList(false,1,12,$where);
+            $list = ImagesModel::instance()->getList(1,12,$where);
             $this->ajaxReturn($list);
         }
 
-        $list = ImagesModel::instance()->getList(false,1,12,$where);
+        $list = ImagesModel::instance()->getList(1,12,$where);
         $this->assign('list',$list);
         $this->assign('month',$month);
         $this->assign('day',$day);
